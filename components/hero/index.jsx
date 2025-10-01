@@ -1,27 +1,51 @@
 "use client"
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
-import { Backgound, TestHero } from "../../public/assets";
+import { Backgound, TestHero,AboutThumb1_1, AboutThumb1_2, Access1, Access2, AboutThumb5_3, BgContactBg1_1, CtaThumb, DownloadThumb1_1, HeroBg1_3 } from "../../public/assets";
 import AnimationText from "../../animation/text";
 import Button from "../button";
 
 const Index = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [offsetX, setOffsetX] = useState(0);
+  const [offsetY, setOffsetY] = useState(0);
+  const containerRef = useRef(null);
+
+  const handleMouseMove = (event) => {
+    const container = containerRef.current;
+    if (!container) return;
+    const rect = container.getBoundingClientRect();
+    const relativeX = event.clientX - rect.left;
+    const relativeY = event.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rawDeltaX = (centerX - relativeX) / 10; // move opposite to cursor X
+    const rawDeltaY = (centerY - relativeY) / 10; // move opposite to cursor Y
+    const clampedX = Math.max(-30, Math.min(30, rawDeltaX));
+    const clampedY = Math.max(-30, Math.min(30, rawDeltaY));
+    setOffsetX(clampedX);
+    setOffsetY(clampedY);
+  };
+
+  const handleMouseLeave = () => {
+    setOffsetX(0);
+    setOffsetY(0);
+  };
   return (
-    <div className="flex w-full">
+    <div className="flex pb-10 w-full">
       <div className="max-w-7xl flex flex-col md:flex-row mx-auto">
         {/* Left Side - Text */}
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center">
           <div className="text-left p-6 md:p-8">
             <AnimationText
-              text="Smarter Infrastructure. Safer Communities. Stronger Connections."
+              text="AMC Contract For IT & Security Solutions."
               delay={150}
               animateBy="words"
               direction="top"
               className="text-xl sm:text-2xl md:text-3xl mb-6 md:mb-8"
             />
             <AnimationText
-              text="From power to protection, Tabdeel delivers the change you need — smarter, scalable, and future-ready IT & security solutions trusted across the UAE."
+              text="Proffessionly optimize interdepent intellectual interoparable connect best practices. Progressively fabricate done."
               delay={80}
               animateBy="words"
               direction="top"
@@ -36,17 +60,23 @@ const Index = () => {
         </div>
 
         {/* Right Side - Image */}
-        <div className="w-full z-[-1] md:w-1/2 flex items-center justify-center mt-6 md:mt-0 relative">
+        <div
+          ref={containerRef}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
+          className="w-full md:w-1/2 flex items-center justify-center mt-6 md:mt-0 relative"
+        >
           {!imageLoaded && (
             <div className="absolute inset-0 m-0 rounded-lg bg-gray-200 animate-pulse" />
           )}
           <Image
-            src={TestHero}
+            src={HeroBg1_3}
             alt="Background"
             onLoad={() => setImageLoaded(true)}
             className={`object-cover w-full h-auto max-h-[400px] md:max-h-full transition-opacity duration-300 ${
               imageLoaded ? "opacity-100" : "opacity-0"
             }`}
+            style={{ transform: `translate3d(${offsetX}px, ${offsetY}px, 0)`, transition: "transform 60ms linear", willChange: "transform" }}
           />
         </div>
       </div>

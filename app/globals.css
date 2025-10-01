@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  color-scheme: light only;
 }
 
 @theme inline {
@@ -12,17 +13,38 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* Dark mode disabled to prevent Chrome dark mode from breaking styles */
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-montserrat), Arial, Helvetica, sans-serif;
+}
+
+/* Force light mode and prevent browser dark mode interference */
+html {
+  color-scheme: light only !important;
+}
+
+/* Override any browser dark mode styles */
+* {
+  color-scheme: light only !important;
+}
+
+/* Ensure form elements maintain light mode appearance */
+input, textarea, select, button {
+  color-scheme: light only !important;
+}
+
+/* Prevent Chrome from applying dark scrollbars */
+::-webkit-scrollbar {
+  color-scheme: light only !important;
 }
 
 /* Cross-browser scrollbar hide utility matching class name used in components */

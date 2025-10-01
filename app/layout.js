@@ -33,26 +33,26 @@ const montserrat = localFont({
 export const metadata = {
   metadataBase: new URL("https://swym.digital"),
   title: {
-    default: "SWYM Digital Marketing",
-    template: "%s | SWYM Digital Marketing",
+    default: "zenex",
+    template: "%s | zenextechnologies",
   },
   description:
     "SWYM Digital provides reliable IT, infrastructure, and digital solutions across Dubai and the UAE.",
   keywords: [
-    "SWYM Digital",
+    "zenextechnologies",
     "IT services",
     "infrastructure",
     "digital transformation",
     "Dubai",
     "UAE",
   ],
-  authors: [{ name: "SWYM Digital" }],
-  creator: "SWYM Digital",
+  authors: [{ name: "zenex technologies" }],
+  creator: "zenextechnologies",
   icons: {
     icon: "/assets/images/Tabdeel_Logo.svg",
   },
   openGraph: {
-    title: "SWYM Digital Marketing",
+    title: "zenex technologies",
     description:
       "Reliable IT and infrastructure solutions that scale with your business.",
     url: "/",
@@ -62,7 +62,7 @@ export const metadata = {
         url: "/assets/images/TESTHERO.png",
         width: 1200,
         height: 630,
-        alt: "SWYM Digital Marketing",
+        alt: "zenex technologies",
       },
     ],
     locale: "en_US",
@@ -70,7 +70,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SWYM Digital Marketing",
+    title: "zenex technologies",
     description:
       "Reliable IT and infrastructure solutions that scale with your business.",
     images: ["/assets/images/TESTHERO.png"],
