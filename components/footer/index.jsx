@@ -83,7 +83,7 @@ const Footer = () => {
                 >
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                <span>971 4 250 1665</span>
+                <span>7025715250</span>
               </div>
             </div>
           </div>
@@ -276,7 +276,7 @@ const Footer = () => {
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/97142501665"
+                href="https://wa.me/7025715250"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center hover:text-green-500 transition-colors duration-300 group py-1"
@@ -303,13 +303,11 @@ const Footer = () => {
                 <label className="block text-sm text-gray-300 mb-2">
                   Your Email
                 </label>
-             <input
-  type="email"
-  placeholder="Enter your email"
-  className="w-full border border-gray-200 rounded-md h-12 px-4 focus:outline-none focus:ring-2 focus:ring-[#FFCB05]"
-
-/>
-
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="w-full border border-gray-200 rounded-md h-12 px-4 focus:outline-none focus:ring-2 focus:ring-[#FFCB05]"
+                />
               </div>
               <button
                 type="submit"
@@ -335,48 +333,44 @@ const Footer = () => {
                       <path
                         className="opacity-75"
                         fill="currentColor"
-                        d="M4 12a8 8 0..."
+                        d="M4 12a8 8 0 018-8v8H4z"
                       ></path>
                     </svg>
                     Subscribing...
                   </>
                 ) : (
-                  "Send"
+                  "Subscribe"
                 )}
               </button>
-              <p className="text-xs text-gray-400 mt-4">
-                Tabdeel © 2025 All rights reserved | Privacy Policy | Terms &
-                Conditions
-              </p>
             </form>
           </div>
+        </div>
+
+        {/* Footer Bottom */}
+        <div className="border-t border-gray-800 mt-8 pt-6 text-center text-sm text-gray-300">
+          <p>
+            © 2024 Tab-Deel Technical Services LLC. All Rights Reserved.
+          </p>
         </div>
       </div>
 
       {/* Toast Notification */}
       {showToast && (
-        <div className="fixed top-4 right-4 left-4 sm:left-auto z-[60] animate-slide-in">
-          <div className="bg-green-500 text-white px-4 sm:px-6 py-3 sm:py-4 rounded-lg shadow-lg flex items-center space-x-3 max-w-sm mx-auto sm:mx-0">
-            <svg
-              className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 13l4 4L19 7"
-              />
-            </svg>
-            <div>
-              <p className="font-semibold text-sm sm:text-base">Success!</p>
-              <p className="text-xs sm:text-sm">
-                We will connect you.
-              </p>
-            </div>
-          </div>
+        <div className="fixed bottom-6 right-6 bg-[#FFCB05] text-black px-4 py-3 rounded-md shadow-lg flex items-center space-x-2 animate-fadeIn">
+          <svg
+            className="w-5 h-5 text-black"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+          <span className="text-sm">Subscribed successfully!</span>
         </div>
       )}
     </>
