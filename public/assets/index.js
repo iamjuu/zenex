@@ -177,6 +177,23 @@ import HeroThumb3_2 from "./hero/heroThumb3_2.png";
 import HeroIthome1 from "./hero/ithome1.png";
 import HeroImage322 from "./hero/image 322.svg";
 
+// service/
+import ServiceThumb2_1 from "./service/serviceThumb2_1.png";
+import ServiceThumb2_2 from "./service/serviceThumb2_2.png";
+import ServiceThumb2_3 from "./service/serviceThumb2_3.png";
+import ServiceThumb2_3_1 from "./service/serviceThumb2_3(1).png";
+import ServiceThumb2_4 from "./service/serviceThumb2_4.png";
+import ServiceThumb2_4_1 from "./service/serviceThumb2_4(1).png";
+import ServiceThumb2_5 from "./service/serviceThumb2_5.png";
+import ServiceThumb2_6 from "./service/serviceThumb2_6.png";
+import ServiceThumb2_7 from "./service/serviceThumb2_7.png";
+import ServiceThumb2_8 from "./service/serviceThumb2_8.png";
+import ServiceThumb3_1 from "./service/serviceThumb3_1.png";
+import ServiceThumb3_2 from "./service/serviceThumb3_2.png";
+import ServiceThumb3_3 from "./service/serviceThumb3_3.png";
+import ServiceThumb3_4 from "./service/serviceThumb3_4.png";
+import ServiceThumb3_5 from "./service/serviceThumb3_5.png";
+
 export { Logo, Backgound, TestHero, AboutImage, Service1, Service2, Service3,
     Card1,Card2,Card3,Card4,Card5,Card6,
     Access1,Access2,Access3,Access4,Access5,Access6,Access7,Access8,Access9,Access15,Access555,AccessVideo,
@@ -187,5 +204,7 @@ export { Logo, Backgound, TestHero, AboutImage, Service1, Service2, Service3,
     Cta1,CtaThumb,
     DownloadThumb1_1,
     FooterThumb2_1,FooterThumb2_2,FooterOld1,FooterOld2,
-    HeroBg1_3,HeroAccessbg,HeroBg2_2,HeroBg2_3,HeroBg3_1,HeroVoice3,HeroBg1_1,HeroVoice1,HeroCctvhome1,Hero3,HeroOld,HeroT2,HeroDDD,HeroBG,HeroBg2_1,HeroIthome2,HeroIthome,HeroBreadcumbBg,HeroOld2,HeroThumb3_1,HeroVoice,HeroCctvhome,HeroVoice2,HeroBg1_2,HeroThumb3_2,HeroIthome1,HeroImage322
+    HeroBg1_3,HeroAccessbg,HeroBg2_2,HeroBg2_3,HeroBg3_1,HeroVoice3,HeroBg1_1,HeroVoice1,HeroCctvhome1,Hero3,HeroOld,HeroT2,HeroDDD,HeroBG,HeroBg2_1,HeroIthome2,HeroIthome,HeroBreadcumbBg,HeroOld2,HeroThumb3_1,HeroVoice,HeroCctvhome,HeroVoice2,HeroBg1_2,HeroThumb3_2,HeroIthome1,HeroImage322,
+    ServiceThumb2_1,ServiceThumb2_2,ServiceThumb2_3,ServiceThumb2_3_1,ServiceThumb2_4,ServiceThumb2_4_1,ServiceThumb2_5,ServiceThumb2_6,ServiceThumb2_7,ServiceThumb2_8,
+    ServiceThumb3_1,ServiceThumb3_2,ServiceThumb3_3,ServiceThumb3_4,ServiceThumb3_5
  };

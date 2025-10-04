@@ -49,7 +49,7 @@ export const metadata = {
   authors: [{ name: "zenex technologies" }],
   creator: "zenextechnologies",
   icons: {
-    icon: "/assets/images/Tabdeel_Logo.svg",
+    icon: "/assets/logo-white.png",
   },
   openGraph: {
     title: "zenex technologies",
