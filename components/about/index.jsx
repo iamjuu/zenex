@@ -1,34 +1,30 @@
 import React from 'react'
 import Image from 'next/image'
-import { AboutImage, TestHero } from '../../public/assets'
+import { About2old, AboutImage, AboutThumb1_1, TestHero } from '../../public/assets'
 import { Zap, ShieldCheck, Clock3, MapPin, Server } from 'lucide-react'
 
 const features = [
   {
     icon: Zap,
-    title: 'Affordable Innovation',
-    description: 'Advanced solutions designed to fit your budget.'
+    title: 'Software Services',
+    description: 'Software services encompass a wide range of'
   },
   {
     icon: ShieldCheck,
-    title: 'Certified Engineers',
-    description: 'Qualified experts who get it right the first time.'
+    title: 'IT Consultancy',
+    description: 'We provide new and emerging technologies'
   },
   {
     icon: Clock3,
-    title: 'Faster Service',
-    description: 'Quick response times and efficient project delivery.'
+    title: 'Web development',
+    description: 'Web development is  the work invloved in '
   },
   {
     icon: MapPin,
-    title: 'UAE‑Wide Presence',
-    description: 'Local expertise wherever your project is located.'
+    title: 'Database Security',
+    description: 'Database security is the processes, tools'
   },
-  {
-    icon: Server,
-    title: 'Trusted Reliability',
-    description: 'Secure, future‑ready solutions delivered consistently.'
-  }
+
 ]
 
 const index = () => {
@@ -40,7 +36,7 @@ const index = () => {
       {/* Image */}
           <div className="w-full  md:w-[40%] flex justify-center md:justify-start" data-aos="zoom-in" data-aos-delay="100">
         <Image
-          src={AboutImage}
+          src={AboutThumb1_1}
           alt="About Tabdeel"
           className="w-full max-w-xs md:w-96 rounded-xl object-cover"
           priority
@@ -73,10 +69,8 @@ const index = () => {
     {/* Bottom paragraph */}
         <div className="w-full mt-4 md:mt-8" data-aos="fade-up" data-aos-delay="150">
             <div className=' px-2 md:px-20 '>
-          <p className="w-full py-10 rounded-xl border border-[#FFCB05] bg-white/30 p-6 text-base leading-relaxed text-gray-700 shadow-sm">
-        Tabdeel delivers The Change You Need in electrical, security, and automation systems. From powering your
-        operations to protecting your people and connecting your spaces, we provide future-ready solutions trusted
-        across the UAE.
+          <p className="w-full py-10 rounded-xl border border-[#FFCB05] bg-white/30 p-6 text-center text-[30px] leading-relaxed text-gray-700 shadow-sm">
+          We Provide Exclusive Service For Your Business
       </p>
       </div>
     </div>
