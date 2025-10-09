@@ -103,7 +103,7 @@ const Index = () => {
               <input
                 type="text"
                 placeholder="Please enter your name"
-                className="w-full border border-gray-200 rounded-md h-12 px-4 focus:outline-none focus:ring-2 focus:ring-[#FFCB05]"
+                className="w-full border border-gray-200 rounded-md h-12 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
             <div data-aos="fade-up" data-aos-delay={400}>
@@ -111,7 +111,7 @@ const Index = () => {
               <input
                 type="email"
                 placeholder="Please enter your email"
-                className="w-full border border-gray-200 rounded-md h-12 px-4 focus:outline-none focus:ring-2 focus:ring-[#FFCB05]"
+                className="w-full border border-gray-200 rounded-md h-12 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
             <div data-aos="fade-up" data-aos-delay={450}>
@@ -119,7 +119,7 @@ const Index = () => {
               <textarea
                 placeholder="Please enter your message"
                 rows={6}
-                className="w-full border border-gray-200 rounded-md p-4 resize-none focus:outline-none focus:ring-2 focus:ring-[#FFCB05]"
+                className="w-full border border-gray-200 rounded-md p-4 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
             <Button

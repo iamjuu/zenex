@@ -27,7 +27,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className=" z-50 w-full bg-transparent">
+    <header  className=" z-50 py-5 w-full bg-transparent">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -38,9 +38,9 @@ const Header = () => {
                 data-aos-delay={100}
                 src={Logo}
                 alt="logo"
-                className="w-36 h-36"
-                width={198}
-                height={72}
+                className="w-36 "
+              
+              
               />
             </Link>
           </div>
@@ -68,7 +68,7 @@ const Header = () => {
           >
             <Button
               href="#contact"
-              className="flex items-center px-4 py-1   border rounded-[8px] text-gray-700 hover:bg-gradient-to-r hover:from-[#3B82F6] hover:to-[#A855F7] hover:text-white font-medium transition-all duration-200"
+              className="flex items-center px-4 py-1    rounded-[8px] text-gray-700 hover:bg-gradient-to-r hover:from-[#3B82F6] hover:to-[#A855F7] hover:text-white font-medium transition-all duration-200"
             >
               Contact Us
             </Button>

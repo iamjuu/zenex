@@ -40,7 +40,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className="w-full bg-[#ebeee4] text-black mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <div className="w-full bg-white text-black mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6 sm:gap-8">
           {/* Company Information */}
           <div className="sm:col-span-2 lg:col-span-1 xl:col-span-1">
@@ -90,7 +90,7 @@ const Footer = () => {
 
           {/* Service */}
           <div className="sm:col-span-1 lg:col-span-1 xl:col-span-1">
-            <h2 className="text-[#FFCB05] font-[500] text-[18px] sm:text-lg mb-3 sm:mb-4">
+            <h2 className="bg-gradient-to-r from-[#3B82F6] to-[#A855F7] bg-clip-text text-transparent font-[500] text-[18px] sm:text-lg mb-3 sm:mb-4">
               Service
             </h2>
             <nav className="space-y-2 text-sm">
@@ -162,7 +162,7 @@ const Footer = () => {
 
           {/* Company */}
           <div className="sm:col-span-1 lg:col-span-1 xl:col-span-1">
-            <h2 className="text-[#FFCB05] font-[500] text-[18px] sm:text-lg mb-3 sm:mb-4">
+            <h2 className="bg-gradient-to-r from-[#3B82F6] to-[#A855F7] bg-clip-text text-transparent font-[500] text-[18px] sm:text-lg mb-3 sm:mb-4">
               Tab-Deel
             </h2>
             <nav className="space-y-2 text-sm">
@@ -225,7 +225,7 @@ const Footer = () => {
 
           {/* Our Social Media */}
           <div className="sm:col-span-2 lg:col-span-1 xl:col-span-1">
-            <h2 className="text-[#FFCB05] font-[500] text-[18px] sm:text-lg mb-3 sm:mb-4">
+            <h2 className="bg-gradient-to-r from-[#3B82F6] to-[#A855F7] bg-clip-text text-transparent font-[500] text-[18px] sm:text-lg mb-3 sm:mb-4">
               Our Social Media
             </h2>
             <nav className="space-y-2 text-sm">
@@ -295,7 +295,7 @@ const Footer = () => {
 
           {/* Join a Newsletter */}
           <div className="sm:col-span-2 lg:col-span-1 xl:col-span-1">
-            <h1 className="text-[#FFCB05] font-[500] text-[18px] sm:text-lg mb-3 sm:mb-4">
+            <h1 className="bg-gradient-to-r from-[#3B82F6] to-[#A855F7] bg-clip-text text-transparent font-[500] text-[18px] sm:text-lg mb-3 sm:mb-4">
               Join a Newsletter
             </h1>
             <form onSubmit={handleNewsletterSubmit} className="space-y-3">
@@ -306,13 +306,13 @@ const Footer = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full border border-gray-200 rounded-md h-12 px-4 focus:outline-none focus:ring-2 focus:ring-[#FFCB05]"
+                  className="w-full border border-gray-200 rounded-md h-12 px-4 focus:outline-none focus:ring-2 focus:ring-[#3B82F6]"
                 />
               </div>
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-secondary text-white px-4 py-2.5 rounded hover:bg-[#FFCB05] bg-[#FFCB05] transition-colors text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                className="w-full bg-gradient-to-r from-[#3B82F6] to-[#A855F7] text-white px-4 py-2.5 rounded hover:opacity-90 transition-all text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
                 {isSubmitting ? (
                   <>
@@ -356,9 +356,9 @@ const Footer = () => {
 
       {/* Toast Notification */}
       {showToast && (
-        <div className="fixed bottom-6 right-6 bg-[#FFCB05] text-black px-4 py-3 rounded-md shadow-lg flex items-center space-x-2 animate-fadeIn">
+        <div className="fixed top-6 right-6 bg-green-500 text-white px-4 py-3 rounded-md shadow-lg flex items-center space-x-2 animate-fadeIn">
           <svg
-            className="w-5 h-5 text-black"
+            className="w-5 h-5 text-white"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

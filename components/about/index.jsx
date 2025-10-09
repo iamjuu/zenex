@@ -28,32 +28,32 @@ const features = [
 
   {
     icon:Server,
-    titile:'Structured Cabling',
+    title:'Structured Cabling',
     description:'Organized, future-ready networks for smooth connectivity',
   },
   {
     icon:Server,
-    titile:'PABX Solutions',
+    title:'PABX Solutions',
     description:'Advanced communication systems for seamless collaboration',
   },
   {
     icon:Server,
-    titile:'Access Control & Time Attendance',
+    title:'Access Control & Time Attendance',
     description:'Smart security for smarter workplaces',
   },
   {
     icon:Server,
-    titile:'ERP Solutions',
+    title:'ERP Solutions',
     description:'Streamlined business management from one dashboard',
   },
   {
     icon:Server,
-    titile:'PC & Workstation Support',
+    title:'PC & Workstation Support',
     description:' End-user support that keeps productivity high',
   },
   {
     icon:Server,
-    titile:'CCTV Solutions',
+    title:'CCTV Solutions',
     description:'Surveillance you can depend on',
   },
 
@@ -83,11 +83,11 @@ const index = () => {
               {features.map(({ icon: Icon, title, description }, idx) => (
           <div
           key={idx}
-          className="relative flex items-start gap-5 rounded-xl p-[1px] bg-gradient-to-r from-[#3B82F6] to-[#A855F7] transition-shadow hover:shadow-md"
+          className="relative flex items-start gap-5 rounded-xl p-[1px]  transition-shadow hover:shadow-md"
           data-aos="fade-up"
           data-aos-delay={(idx % 2 === 0 ? 0 : 100) + Math.floor(idx / 2) * 100}
         >
-          <div className="flex items-start gap-5 w-full h-full rounded-xl bg-white p-5 shadow-sm">
+          <div className="flex items-start gap-5 w-full h-full rounded-xl backdrop-blur-md p-5 shadow-sm">
             <div className="shrink-0 rounded-full bg-green-100 text-green-700 p-3">
               <Icon className="w-5 h-5" />
             </div>
@@ -106,7 +106,7 @@ const index = () => {
     {/* Bottom paragraph */}
         <div className="w-full mt-4 md:mt-8" data-aos="fade-up" data-aos-delay="150">
             <div className=' px-2 md:px-20 '>
-         <p className="relative w-full py-10 rounded-xl bg-white p-6 text-center text-[30px] leading-relaxed text-gray-700 shadow-sm before:absolute before:inset-0 before:rounded-xl before:p-[2px] before:bg-gradient-to-r before:from-[#3B82F6] before:to-[#A855F7] before:-z-10 before:content-['']">
+          <p className="relative w-full py-10 rounded-xl  backdrop-blur-md p-6 text-center text-[30px] leading-relaxed text-gray-700 shadow-sm">
   We Provide Exclusive Service For Your Business
 </p>
 
