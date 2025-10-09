@@ -21,19 +21,12 @@ const index = () => {
             <>
 
             <h1 className="text-[24px]">
-            Support
-Future-Driven Solutions
-For Smarter, Safer Businesses
+            Our Commitment to You
+
             </h1>
               <p className="text-gray-600 text-base sm:text-lg lg:text-xl leading-relaxed">
-                At Tabdeel, we go beyond solutions — shaping smarter, safer, and
-                more connected spaces across the UAE. With affordable
-                innovation, certified engineers, and faster service, we empower
-                homes and businesses with electrical works, CCTV security, home
-                automation, networking, and time-attendance systems. Our
-                UAE-wide presence makes us the trusted partner for clients in
-                Dubai, Sharjah, Abu Dhabi, and beyond.
-              </p>
+              With Monthly 2 Regular Visits, Unlimited Remote Support, and a dedicated technical team, Zenex ensures your IT never skips a beat.
+Every solution is built around efficiency, transparency, and expert care.   </p>
           
             </>
           </div>

@@ -2,28 +2,62 @@ import React from 'react'
 import Image from 'next/image'
 import { About2old, AboutImage, AboutThumb1_1, TestHero } from '../../public/assets'
 import { Zap, ShieldCheck, Clock3, MapPin, Server } from 'lucide-react'
+import { icon } from '@fortawesome/fontawesome-svg-core'
 
 const features = [
   {
     icon: Zap,
     title: 'Software Services',
-    description: 'Software services encompass a wide range of'
+    description: 'Setup, optimization & proactive monitoring for peak performance'
   },
   {
     icon: ShieldCheck,
-    title: 'IT Consultancy',
+    title: 'Server Solutions',
     description: 'We provide new and emerging technologies'
   },
   {
     icon: Clock3,
-    title: 'Web development',
-    description: 'Web development is  the work invloved in '
+    title: 'Cloud & Backup Solutions',
+    description: 'Secure, scalable storage with guaranteed data safety'
   },
   {
     icon: MapPin,
-    title: 'Database Security',
-    description: 'Database security is the processes, tools'
+    title: 'Data Recovery',
+    description: 'Fast, reliable restoration when it matters most'
   },
+
+  {
+    icon:Server,
+    titile:'Structured Cabling',
+    description:'Organized, future-ready networks for smooth connectivity',
+  },
+  {
+    icon:Server,
+    titile:'PABX Solutions',
+    description:'Advanced communication systems for seamless collaboration',
+  },
+  {
+    icon:Server,
+    titile:'Access Control & Time Attendance',
+    description:'Smart security for smarter workplaces',
+  },
+  {
+    icon:Server,
+    titile:'ERP Solutions',
+    description:'Streamlined business management from one dashboard',
+  },
+  {
+    icon:Server,
+    titile:'PC & Workstation Support',
+    description:' End-user support that keeps productivity high',
+  },
+  {
+    icon:Server,
+    titile:'CCTV Solutions',
+    description:'Surveillance you can depend on',
+  },
+
+
 
 ]
 
