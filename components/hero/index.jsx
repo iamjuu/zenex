@@ -38,11 +38,11 @@ const Index = () => {
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center">
           <div className="text-left p-6 md:p-8">
             <AnimationText
-              text="AMC Contract For IT & Security Solutions."
+              text="Empowering UAE Businesses with Reliable IT Solutions"
               delay={150}
               animateBy="words"
               direction="top"
-              className="text-xl sm:text-2xl md:text-3xl mb-6 md:mb-8"
+              className="text-xl   sm:text-2xl md:text-3xl font-[400] mb-6 md:mb-8"
             />
             <AnimationText
               text="Proffessionly optimize interdepent intellectual interoparable connect best practices. Progressively fabricate done."
@@ -54,8 +54,8 @@ const Index = () => {
           </div>
 
           <div className="w-full gap-5 flex">
-            <Button className="bg-[#FFCB05] text-white">Get Quote</Button>
-            <Button className=" border border-[#FFCB05]">Contect us</Button>
+            <Button className=" text-white">Get Quote</Button>
+            <Button className=" ">Contect us</Button>
           </div>
         </div>
 

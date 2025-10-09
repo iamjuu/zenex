@@ -51,7 +51,7 @@ const Header = () => {
               <Link
                 key={link.label}
                 href={link.href}
-                className="relative text-[14px] font-medium duration-700 delay-200 hover:text-[#FFCB05] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-[#FFCB05] after:content-[''] after:transition-transform after:duration-300 hover:after:scale-x-100"
+                className="relative text-[14px] font-medium duration-700 delay-200 hover:text-[#3B82F6] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-gradient-to-r after:from-[#3B82F6] after:to-[#A855F7] after:content-[''] after:transition-transform after:duration-300 hover:after:scale-x-100"
                 data-aos="flip-down"
                 data-aos-delay={index * 400}
               >
@@ -68,7 +68,7 @@ const Header = () => {
           >
             <Button
               href="#contact"
-              className="flex items-center px-4 py-1  border-[#FFCB05] border rounded-[8px] text-gray-700 hover:[#FFCB05] font-medium transition-all duration-200"
+              className="flex items-center px-4 py-1   border rounded-[8px] text-gray-700 hover:bg-gradient-to-r hover:from-[#3B82F6] hover:to-[#A855F7] hover:text-white font-medium transition-all duration-200"
             >
               Contact Us
             </Button>
@@ -113,7 +113,7 @@ const Header = () => {
                   key={link.label}
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center hover:text-[#FFCB05] space-x-3 px-3 py-2 rounded-md text-[12px] font-medium text-gray-700"
+                  className="flex items-center hover:text-[#3B82F6] space-x-3 px-3 py-2 rounded-md text-[12px] font-medium text-gray-700"
                   data-aos="flip-down"
                   data-aos-delay={index * 100}
                 >
@@ -123,7 +123,7 @@ const Header = () => {
               <Link
                 href="#contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#FFCB05] hover:bg-gray-50 transition-all duration-500 ease-in-out delay-100 hover:scale-105 hover:shadow-sm"
+                className="flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#3B82F6] hover:bg-gray-50 transition-all duration-500 ease-in-out delay-100 hover:scale-105 hover:shadow-sm"
                 data-aos="flip-down"
               >
                 <Phone color="black" className="w-5 h-5" />

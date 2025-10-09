@@ -54,7 +54,7 @@ export default function Home() {
     <div
       style={{
         backgroundImage: `url(${Backgound.src})`,
-        backgroundPosition: "bottom",
+        backgroundPosition: "top",
         backgroundSize: "full",
         backgroundRepeat: "repeat",
       }}

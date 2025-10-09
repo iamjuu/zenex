@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { Clock, Compass } from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Button from "../button";
 
 const Index = () => {
   useEffect(() => {
@@ -35,7 +36,7 @@ const Index = () => {
         {/* Left content */}
         <div data-aos="fade-up" data-aos-delay={0}>
           <div className="mb-6">
-            <h2 className="text-xl font-[400] text-[#FFCB05]">Share Your Details</h2>
+            <h2 className="text-xl font-[400] text-black">Share Your Details</h2>
           </div>
           <p className="text-gray-700 text-[14px]  leading-7 mb-8">
             Have questions about our services?
@@ -47,9 +48,11 @@ const Index = () => {
 
           <div className="grid sm:grid-cols-2 gap-8">
             <div className="flex items-start gap-4" data-aos="fade-up" data-aos-delay={100}>
-              <div className="h-12 w-12 rounded-xl bg-[#E53935] flex items-center justify-center shrink-0">
-                <Clock className="text-white" size={24} />
-              </div>
+            <div 
+            className="h-12 w-12 rounded-xl flex items-center justify-center shrink-0 bg-gradient-to-r from-[#3B82F6] to-[#A855F7]">
+  <Clock className="text-white" size={24} />
+</div>
+
               <div>
                 <p className="font-semibold mb-1">Time Response</p>
                 <p className="text-gray-700 text-sm leading-6">
@@ -60,7 +63,8 @@ const Index = () => {
             </div>
 
             <div className="flex items-start gap-4" data-aos="fade-up" data-aos-delay={200}>
-              <div className="h-12 w-12 rounded-xl bg-[#E53935] flex items-center justify-center shrink-0">
+              <div
+            className="h-12 w-12 rounded-xl flex items-center justify-center shrink-0 bg-gradient-to-r from-[#3B82F6] to-[#A855F7]">
                 <Compass className="text-white" size={24} />
               </div>
               <div>
@@ -77,10 +81,10 @@ const Index = () => {
         {/* Right content - Form */}
         <div className="w-full" data-aos="fade-up" data-aos-delay={150}>
           <div className="flex justify-end mb-6" data-aos="fade-up" data-aos-delay={250}>
-            <button className="inline-flex items-center gap-2 bg-[#FFCB05] text-white px-5 py-3 rounded-full shadow-sm">
+            <Button className=" flex  items-center  gap-2 rounded-full">
               <span className="h-2.5 w-2.5 rounded-full bg-white" />
               Get in Touch
-            </button>
+            </Button>
           </div>
 
           <div className="mb-6" data-aos="fade-up" data-aos-delay={300}>
@@ -118,14 +122,14 @@ const Index = () => {
                 className="w-full border border-gray-200 rounded-md p-4 resize-none focus:outline-none focus:ring-2 focus:ring-[#FFCB05]"
               />
             </div>
-            <button
+            <Button
               type="submit"
-              className="w-full bg-[#FFCB05] text-white h-12 rounded-md"
+              className="w-full  text-white h-12 rounded-md"
               data-aos="fade-up"
               data-aos-delay={500}
             >
               Send
-            </button>
+            </Button>
           </form>
         </div>
       </div>
