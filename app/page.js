@@ -54,9 +54,10 @@ export default function Home() {
     <div
       style={{
         backgroundImage: `url(${Backgound.src})`,
-        backgroundPosition: "top",
-        backgroundSize: "full",
-        backgroundRepeat: "repeat",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
       }}
       className="min-h-screen  px-2 "
     >

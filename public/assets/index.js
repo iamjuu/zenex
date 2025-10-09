@@ -6,8 +6,8 @@
 // - Other folders available (not yet exported here): bg, blog, cctv, cta, done, download, footer, hero, icon, images, itsolution, pabx, project, screenshots, service, shape, skill, team, testimonial, wcu, web
 // Add imports/exports below as needed when assets from those folders are used.
 
-import Logo from "./logo-white.png";
-import Backgound from "./images/background.svg";
+import Logo from "./logo-white - Copy.png";
+import Backgound from "./images/zenexbg.jpg";
 import TestHero from "./images/TESTHERO.png";
 import AboutImage from "./images/aboutimage.jpeg";
 import Service1 from "./images/pexels-bulat369-1243575272-32588556.jpg";

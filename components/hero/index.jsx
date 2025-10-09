@@ -45,7 +45,7 @@ const Index = () => {
               className="text-xl   sm:text-2xl md:text-3xl font-[400] mb-6 md:mb-8"
             />
             <AnimationText
-              text="Proffessionly optimize interdepent intellectual interoparable connect best practices. Progressively fabricate done."
+              text="From servers to security — Zenex delivers end-to-end IT infrastructure, maintenance, and support tailored to your business."
               delay={80}
               animateBy="words"
               direction="top"

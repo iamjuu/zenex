@@ -72,7 +72,7 @@ export default function QuickAnswer() {
 
             <div className="mt-10">
               <p className="text-red-600 text-[12px] mb-3">Didn’t find your question?</p>
-              <Button as="a" href="#contact" className=" border border-[#FFCB05] text-black hover:bg-[#FFCB05]/90">
+              <Button as="a" href="#contact" className="   text-black ">
                 Contact Us Now
               </Button>
             </div>
@@ -101,7 +101,7 @@ export default function QuickAnswer() {
                 >
                   <button
                     onClick={() => toggle(idx)}
-                    className="w-full flex items-center justify-between text-left px-4 sm:px-5 py-4 hover:bg-gray-50"
+                    className="w-full flex items-center justify-between text-left px-4 sm:px-5 py-4 hover:bg-gray-50/40"
                     aria-expanded={isOpen}
                   >
                     <span className="text-sm sm:text-base font-medium text-gray-900">
@@ -112,7 +112,7 @@ export default function QuickAnswer() {
                     </span>
                   </button>
                   {isOpen && (
-                    <div className="px-4 sm:px-5 pb-4 pt-0 text-sm text-gray-600 bg-white">
+                    <div className="px-4 sm:px-5 pb-4 pt-0 text-sm text-gray-600 ">
                       {item.a}
                     </div>
                   )}
