@@ -55,7 +55,7 @@ const Index = () => {
 
               <div>
                 <p className="font-semibold mb-1">Time Response</p>
-                <p className="text-gray-700 text-sm leading-6">
+                <p className="text-gray-700 text-[12px] leading-6">
                   we prioritize timely responses to
                   ensure smooth community
                 </p>
@@ -69,7 +69,7 @@ const Index = () => {
               </div>
               <div>
                 <p className="font-semibold mb-1">Guided next steps</p>
-                <p className="text-gray-700 text-sm leading-6">
+                <p className="text-gray-700 text-[12px] leading-6">
                   Clear guidance at every stage — no
                   guesswork, just support.
                 </p>
@@ -99,7 +99,7 @@ const Index = () => {
 
           <form className="space-y-5" onSubmit={handleSubmit}>
             <div data-aos="fade-up" data-aos-delay={350}>
-              <label className="block text-sm mb-2">Name</label>
+              <label className="block text-[12px] mb-2">Name</label>
               <input
                 type="text"
                 placeholder="Please enter your name"
@@ -107,7 +107,7 @@ const Index = () => {
               />
             </div>
             <div data-aos="fade-up" data-aos-delay={400}>
-              <label className="block text-sm mb-2">Email</label>
+              <label className="block text-[12px] mb-2">Email</label>
               <input
                 type="email"
                 placeholder="Please enter your email"
@@ -115,7 +115,7 @@ const Index = () => {
               />
             </div>
             <div data-aos="fade-up" data-aos-delay={450}>
-              <label className="block text-sm mb-2">Message</label>
+              <label className="block text-[12px] mb-2">Message</label>
               <textarea
                 placeholder="Please enter your message"
                 rows={6}

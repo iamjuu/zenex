@@ -46,7 +46,7 @@ const CyberSecurity = () => {
         </h1>
 
         <p
-               className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed drop-shadow-md">
+               className="text-[12px] sm:text-base md:text-lg lg:text-xl leading-relaxed drop-shadow-md">
 
           Cyber security protects your digital assets from evolving threats and 
           vulnerabilities. Our comprehensive security solutions include vulnerability 

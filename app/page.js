@@ -89,11 +89,12 @@ export default function Home() {
           <Hero />
         </div>
 
-        <div id="solution">
+        {/* <div id="solution">
           <About />
-        </div>
-        <div id="project">
+        </div> */}
+        <div className="flex flex-col gap-3" id="project">
           <Support />
+          <About />
         </div>
         <div id="blog">
           <Carousel items={items} />

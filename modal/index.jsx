@@ -36,7 +36,7 @@ const Contact = ({ closeForm }) => {
             <div className="flex items-center justify-between">
               <div>
                 <h1 className="text-[20px] font-bold text-white">Book Consultation</h1>
-                <p className="text-orange-100 text-sm mt-1">Get your interior design consultation</p>
+                <p className="text-orange-100 text-[12px] mt-1">Get your interior design consultation</p>
               </div>
               <button
                 onClick={closeForm}
@@ -54,7 +54,7 @@ const Contact = ({ closeForm }) => {
             <form onSubmit={handleSubmit} className="p-8 space-y-6">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <label htmlFor="userFirstName" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="userFirstName" className="block text-[12px] font-medium text-gray-700">
                   First Name
                 </label>
                 <input
@@ -67,7 +67,7 @@ const Contact = ({ closeForm }) => {
                 />
               </div>
               <div className="space-y-2">
-                <label htmlFor="userLastName" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="userLastName" className="block text-[12px] font-medium text-gray-700">
                   Last Name
                 </label>
                 <input
@@ -82,7 +82,7 @@ const Contact = ({ closeForm }) => {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="userEmail" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="userEmail" className="block text-[12px] font-medium text-gray-700">
                 Email Address
               </label>
               <input
@@ -96,7 +96,7 @@ const Contact = ({ closeForm }) => {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="userNumber" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="userNumber" className="block text-[12px] font-medium text-gray-700">
                 Phone Number
               </label>
               <input
@@ -110,7 +110,7 @@ const Contact = ({ closeForm }) => {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="serviceType" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="serviceType" className="block text-[12px] font-medium text-gray-700">
                 Service Type
               </label>
               <select
@@ -130,7 +130,7 @@ const Contact = ({ closeForm }) => {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="message" className="block text-[12px] font-medium text-gray-700">
                 Message (Optional)
               </label>
               <textarea
@@ -184,7 +184,7 @@ const Contact = ({ closeForm }) => {
             </svg>
             <div>
               <p className="font-semibold">Success!</p>
-              <p className="text-sm">Your consultation request has been submitted.</p>
+              <p className="text-[12px]>Your consultation request has been submitted.</p>
             </div>
           </div>
         </div>

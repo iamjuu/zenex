@@ -65,7 +65,7 @@ export default function QuickAnswer() {
             <h2 className="text-[28px] sm:text-[34px] leading-tight font-semibold text-black mb-4">
               Quick Answers. Clear Solutions.
             </h2>
-            <p className="text-gray-700 text-sm sm:text-base leading-relaxed max-w-[48ch]">
+            <p className="text-gray-700 text-[12px] sm:text-base leading-relaxed max-w-[48ch]">
               Looking for electrical, security, or automation solutions? Tell us about your
               project, and our team will respond quickly with the next steps.
             </p>
@@ -104,7 +104,7 @@ export default function QuickAnswer() {
                     className="w-full flex items-center justify-between text-left px-4 sm:px-5 py-4 hover:bg-gray-50/40"
                     aria-expanded={isOpen}
                   >
-                    <span className="text-sm sm:text-base font-medium text-gray-900">
+                    <span className="text-[12px] sm:text-base font-medium text-gray-900">
                       {item.q}
                     </span>
                     <span className="ml-4 flex items-center justify-center w-6 h-6 rounded-full border border-gray-300 text-gray-700">
@@ -112,7 +112,7 @@ export default function QuickAnswer() {
                     </span>
                   </button>
                   {isOpen && (
-                    <div className="px-4 sm:px-5 pb-4 pt-0 text-sm text-gray-600 ">
+                    <div className="px-4 sm:px-5 pb-4 pt-0 text-[12px] text-gray-600 ">
                       {item.a}
                     </div>
                   )}
