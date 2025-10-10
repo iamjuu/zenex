@@ -40,7 +40,7 @@ const ServicesPage = () => {
       <Navbar />
       
       {/* Header Section */}
-      <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 min-h-[60vh] flex items-center justify-center z-[-1] overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-20 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>

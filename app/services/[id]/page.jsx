@@ -15,7 +15,7 @@ const page = ({ params }) => {
   return (
     <div>
       <Navbar/>
-      <main className="w-full">
+      <main className="w-full z-[-1]">
         {/* <h1 className="text-3xl font-semibold mb-4">{service.title}</h1>
         <p className="text-gray-600 mb-8">{service.description}</p> */}
         <section className="w-full">

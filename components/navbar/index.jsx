@@ -90,7 +90,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation Menu */}
-          <nav className="hidden md:flex items-center gap-[72px]">
+          <nav className="hidden z-[50] md:flex items-center gap-[72px]">
             {navLinks.map((link, index) => (
               link.href === "/services" ? (
                 <div key={link.label} className="relative group" data-aos="flip-down" data-aos-delay={index * 400}>
@@ -99,7 +99,7 @@ const Header = () => {
                   >
                     {link.label}
                   </span>
-                  <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute left-0 top-full mt-3 bg-white border border-gray-100 shadow-lg rounded-md min-w-56 z-[70]">
+                  <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute left-0 top-full mt-3 bg-white border border-gray-100 shadow-lg rounded-md min-w-56 z-[9999]">
                     <div className="py-2">
                       {services.map((svc) => (
                         <Link
