@@ -116,7 +116,7 @@ const ServicesPage = () => {
                 {/* Service Content */}
                 <div className="px-6 pb-6">
                   <h3 className="text-xl font-semibold text-gray-800 mb-3">{service.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                  <p className="text-gray-600 text-[12px] mb-4 leading-relaxed">
                     {service.description}
                   </p>
                   <Link 

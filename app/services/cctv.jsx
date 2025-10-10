@@ -44,7 +44,7 @@ const CCTV = () => {
         </h1>
 
         <p 
-        className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed drop-shadow-md">
+        className="text-[12px] sm:text-base md:text-lg lg:text-xl leading-relaxed drop-shadow-md">
           CCTV surveillance systems provide comprehensive security solutions for 
           businesses and homes. Our professional installation and monitoring services 
           ensure 24/7 protection with high-definition cameras, night vision capabilities, 

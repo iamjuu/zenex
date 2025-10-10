@@ -47,7 +47,7 @@ const Footer = () => {
             <div className="flex items-center mb-4 sm:mb-6">
               <Image src={Logo} alt="Cam Design Logo" className=" w-36" />
             </div>
-            <div className="space-y-3 text-sm">
+            <div className="space-y-3 text-[12px]">
               <div className="flex items-start">
              
                 <span className="leading-relaxed">
@@ -83,7 +83,7 @@ const Footer = () => {
             <h2 className="bg-gradient-to-r from-[#3B82F6] to-[#A855F7] bg-clip-text text-transparent font-[500] text-[18px] sm:text-lg mb-3 sm:mb-4">
               Service
             </h2>
-            <nav className="space-y-2 text-sm">
+            <nav className="space-y-2 text-[12px]">
               <Link
                 to="services"
                 spy={true}
@@ -155,7 +155,7 @@ const Footer = () => {
             <h2 className="bg-gradient-to-r from-[#3B82F6] to-[#A855F7] bg-clip-text text-transparent font-[500] text-[18px] sm:text-lg mb-3 sm:mb-4">
               Tab-Deel
             </h2>
-            <nav className="space-y-2 text-sm">
+            <nav className="space-y-2 text-[12px]">
               <Link
                 to="about"
                 spy={true}
@@ -218,7 +218,7 @@ const Footer = () => {
             <h2 className="bg-gradient-to-r from-[#3B82F6] to-[#A855F7] bg-clip-text text-transparent font-[500] text-[18px] sm:text-lg mb-3 sm:mb-4">
               Our Social Media
             </h2>
-            <nav className="space-y-2 text-sm">
+            <nav className="space-y-2 text-[12px]">
               {/* Instagram */}
               <a
                 href="https://www.instagram.com/zenexcomputerservicesllc"
@@ -294,7 +294,7 @@ const Footer = () => {
             </h1>
             <form onSubmit={handleNewsletterSubmit} className="space-y-3">
               <div>
-                <label className="block text-sm text-gray-300 mb-2">
+                <label className="block text-[12px] text-gray-300 mb-2">
                   Your Email
                 </label>
                 <input
@@ -306,7 +306,7 @@ const Footer = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-[#3B82F6] to-[#A855F7] text-white px-4 py-2.5 rounded hover:opacity-90 transition-all text-sm font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                className="w-full bg-gradient-to-r from-[#3B82F6] to-[#A855F7] text-white px-4 py-2.5 rounded hover:opacity-90 transition-all text-[12px] font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
                 {isSubmitting ? (
                   <>
@@ -341,7 +341,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="border-t border-gray-800 mt-8 pt-6 text-center text-sm text-gray-300">
+        <div className="border-t border-gray-800 mt-8 pt-6 text-center text-[12px] text-gray-300">
           <p>
             ©  All Copyright 2024 by ZENEX
           </p>
@@ -364,7 +364,7 @@ const Footer = () => {
               d="M5 13l4 4L19 7"
             />
           </svg>
-          <span className="text-sm">Subscribed successfully!</span>
+          <span className="text-[12px]">Subscribed successfully!</span>
         </div>
       )}
     </>
