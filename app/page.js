@@ -79,13 +79,13 @@ export default function Home() {
         backgroundRepeat: "no-repeat",
         backgroundAttachment: "fixed",
       }}
-      className="min-h-screen  px-2 "
+      className="min-h-screen px-2 "
     >
       <div className="flex flex-col ">
         <div>
           <Navbar />
         </div>
-        <div id="hero">
+        <div className="  pt-0 md:pt-36" id="hero">
           <Hero />
         </div>
 

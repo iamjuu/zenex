@@ -1,8 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { About2old, AboutImage, AboutThumb1_1, TestHero } from '../../public/assets'
-import { Zap, ShieldCheck, Clock3, MapPin, Server } from 'lucide-react'
-import { icon } from '@fortawesome/fontawesome-svg-core'
+import { Zap, ShieldCheck, Clock3, MapPin, Server, Cable, PhoneCall, BadgeCheck, LayoutDashboard, Monitor, Camera } from 'lucide-react'
 
 const features = [
   {
@@ -27,32 +26,32 @@ const features = [
   },
 
   {
-    icon:Server,
+    icon:Cable,
     title:'Structured Cabling',
     description:'Organized, future-ready networks for smooth connectivity',
   },
   {
-    icon:Server,
+    icon:PhoneCall,
     title:'PABX Solutions',
     description:'Advanced communication systems for seamless collaboration',
   },
   {
-    icon:Server,
+    icon:BadgeCheck,
     title:'Access Control & Time Attendance',
     description:'Smart security for smarter workplaces',
   },
   {
-    icon:Server,
+    icon:LayoutDashboard,
     title:'ERP Solutions',
     description:'Streamlined business management from one dashboard',
   },
   {
-    icon:Server,
+    icon:Monitor,
     title:'PC & Workstation Support',
     description:' End-user support that keeps productivity high',
   },
   {
-    icon:Server,
+    icon:Camera,
     title:'CCTV Solutions',
     description:'Surveillance you can depend on',
   },

@@ -35,10 +35,10 @@ export const AnimatedTestimonials = ({
   };
   return (
     <div
-      className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
-      <div className="relative grid grid-cols-1 gap-20 md:grid-cols-2">
+      className="mx-auto max-w-sm px-0 py-20 font-sans antialiased md:max-w-4xl md:px-2 lg:px-4">
+      <div className="relative grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12 lg:gap-20">
         <div>
-          <div className="relative h-80 w-full">
+          <div className="relative h-64 w-full sm:h-72 md:h-80">
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -82,7 +82,7 @@ export const AnimatedTestimonials = ({
             </AnimatePresence>
           </div>
         </div>
-        <div className="flex flex-col justify-between py-4">
+        <div className="flex flex-col justify-between py-4 px-4 sm:px-6 md:px-2">
           <motion.div
             key={active}
             initial={{
@@ -101,13 +101,13 @@ export const AnimatedTestimonials = ({
               duration: 0.2,
               ease: "easeInOut",
             }}>
-            <h3 className="text-xl font-[500] text-black ">
+            <h3 className="text-lg font-[500] text-black sm:text-xl">
               {testimonials[active].name}
             </h3>
             <p className="text-[14px] text-gray-800 ">
               {testimonials[active].designation}
             </p>
-            <motion.p className="mt-8 text-lg text-gray-800 ">
+            <motion.p className="mt-6 text-base text-gray-800 sm:mt-8 sm:text-lg">
               {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
@@ -132,7 +132,7 @@ export const AnimatedTestimonials = ({
               ))}
             </motion.p>
           </motion.div>
-          <div className="flex gap-4 pt-12 md:pt-0">
+          <div className="flex gap-4 pt-8 sm:pt-12 md:pt-0">
             <button
               onClick={handlePrev}
               className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800">

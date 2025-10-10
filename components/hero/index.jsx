@@ -4,8 +4,7 @@ import Image from "next/image";
 import { Backgound, TestHero,AboutThumb1_1, AboutThumb1_2, Access1, Access2, AboutThumb5_3, BgContactBg1_1, CtaThumb, DownloadThumb1_1, HeroBg1_3 } from "../../public/assets";
 import AnimationText from "../../animation/text";
 import Button from "../button";
-
-const Index = () => {
+  const Index = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [offsetX, setOffsetX] = useState(0);
   const [offsetY, setOffsetY] = useState(0);
