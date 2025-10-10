@@ -13,7 +13,7 @@ const page = ({ params }) => {
   if (!service) return notFound();
 
   return (
-    <div>
+    <div className="pt-[120px]">
       <Navbar/>
       <main className="w-full z-[-1]">
         {/* <h1 className="text-3xl font-semibold mb-4">{service.title}</h1>

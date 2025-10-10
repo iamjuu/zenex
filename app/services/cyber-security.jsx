@@ -37,32 +37,17 @@ const CyberSecurity = () => {
 
       {/* Content */}
       <div
-      className="flex flex-col gap-5"
-        style={{
-          position: "relative",
-          zIndex: 1,
-          maxWidth: "800px",
-          padding: "0 20px",
-        }}
+       className="relative z-10 flex flex-col gap-4 sm:gap-5 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl px-4 sm:px-6 md:px-8 lg:px-12"
       >
         <h1
-          style={{
-            fontSize: "48px",
-            fontWeight: "700",
-            marginBottom: "20px",
-            textShadow: "2px 2px 6px rgba(0,0,0,0.6)",
-          }}
-        >
+                 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-5 drop-shadow-lg">
+
           This is Cyber Security
         </h1>
 
         <p
-          style={{
-            fontSize: "18px",
-            lineHeight: "1.8",
-            textShadow: "1px 1px 3px rgba(0,0,0,0.4)",
-          }}
-        >
+               className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed drop-shadow-md">
+
           Cyber security protects your digital assets from evolving threats and 
           vulnerabilities. Our comprehensive security solutions include vulnerability 
           assessments, system hardening, continuous monitoring, and compliance management. 
