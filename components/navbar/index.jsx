@@ -14,8 +14,7 @@ const navLinks = [
   { href: "/#about", label: "About" },
   { href: "/services", label: "services" },
   { href: "/#solution", label: "Solution" },
-  { href: "/#project", label: "Projects" },
-  { href: "/#blog", label: "Blog" },
+  // { href: "/#project", label: "Projects" },
 ];
 
 const Header = () => {
@@ -73,7 +72,7 @@ const Header = () => {
         </div>
       </div>
 
-      <header className="fixed top-10 left-0 w-full  backdrop-blur-sm border-b border-gray-100 z-50 py-5">
+      <header className="fixed top-10 left-0 w-full  backdrop-blur-sm  z-50 py-5">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-center">
             {/* Logo */}
