@@ -91,7 +91,7 @@ const Footer = () => {
                 duration={500}
                 className="block hover:text-secondary transition-colors py-1"
               >
-                Labour Camp Wi-Fi
+                Web Development
               </Link>
               <Link
                 to="services"
@@ -350,7 +350,7 @@ const Footer = () => {
 
       {/* Toast Notification */}
       {showToast && (
-        <div className="fixed top-6 right-6 bg-green-500 text-white px-4 py-3 rounded-md shadow-lg flex items-center space-x-2 animate-fadeIn">
+        <div className="fixed top-36 right-2 bg-green-500 text-white px-4 py-3 rounded-md shadow-lg flex items-center space-x-2 animate-fadeIn">
           <svg
             className="w-5 h-5 text-white"
             fill="none"
