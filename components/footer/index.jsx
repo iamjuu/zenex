@@ -49,7 +49,7 @@ const Footer = () => {
             </div>
             <div className="space-y-3 text-sm">
               <div className="flex items-start">
-                <svg
+                {/* <svg
                   className="w-4 h-4 text-secondary mt-1 mr-3 flex-shrink-0"
                   fill="currentColor"
                   viewBox="0 0 20 20"
@@ -59,9 +59,9 @@ const Footer = () => {
                     d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
                     clipRule="evenodd"
                   />
-                </svg>
+                </svg> */}
                 <span className="leading-relaxed">
-                  Edakked Railway Gate Beach Road, Edakkad, Kannur, Kerala
+                zenex it is a dynamicand innovative technology company dedicatedto solution 
                 </span>
               </div>
               <div className="flex items-center">
