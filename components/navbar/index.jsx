@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
 import Button from "../button";
-import { Menu, X, Phone } from "lucide-react"; // Import Lucide icons
+import { Menu, X, Phone, Mail, Instagram, Linkedin } from "lucide-react"; // Import Lucide icons
 import { Logo } from "../../public/assets";
 import Image from "next/image";
 
@@ -27,7 +27,48 @@ const Header = () => {
   }, []);
 
   return (
-    <header  className=" z-50 py-5 w-full bg-transparent">
+
+    <div>
+<div className="fixed top-0 left-0 w-full bg-white text-[#135fa5] text-[12px] z-[60]">
+  <div className="max-w-7xl mx-auto flex items-center justify-between h-10 px-4">
+    <div className="flex items-center gap-6">
+      <span className="hidden sm:inline">Dubai -</span>
+      <a href="tel:+971552773923" className="flex items-center gap-2 hover:opacity-90">
+        <Phone className="w-4 h-4" />
+        <span>+971 55 277 3923</span>
+      </a>
+      <a
+        href="mailto:zenex.techllc@gmail.com"
+        className="hidden sm:flex items-center gap-2 hover:opacity-90"
+      >
+        <Mail className="w-4 h-4" />
+        <span>zenex.techllc@gmail.com</span>
+      </a>
+    </div>
+    <div className="flex items-center gap-4">
+      <a
+        href="https://www.instagram.com/zenexcomputerservicesllc"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+        className="hover:opacity-90"
+      >
+        <Instagram className="w-4 h-4" />
+      </a>
+      <a
+        href="https://www.linkedin.com/company/zenex-computer-services-llc/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        className="hover:opacity-90"
+      >
+        <Linkedin className="w-4 h-4" />
+      </a>
+    </div>
+  </div>
+</div>
+
+    <header  className=" z-50 py-5 w-full bg-transparent mt-10">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -134,6 +175,7 @@ const Header = () => {
         </>
       )}
     </header>
+    </div>
   );
 };
 
