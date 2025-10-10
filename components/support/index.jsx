@@ -3,7 +3,7 @@ import { Service1, Service2, Service3 } from "../../public/assets";
 import Image from "next/image";
 const index = () => {
   return (
-    <div className="min-h-screen  py-16 lg:py-24">
+    <div className="py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Title - Centered */}
         <div

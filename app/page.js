@@ -1,3 +1,5 @@
+"use client"
+import { useState,useEffect  } from "react";
 import Image from "next/image";
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
@@ -11,6 +13,24 @@ import QuickAnswer from "@/components/quickanswer";
 import Contact from "@/components/contect";
 import { Bolt, Users, LineChart, Clock, Ticket, Database } from "lucide-react";
 export default function Home() {
+  const whatsappNumber =  "971564407700"; // E.164 format, e.g., 15551234567
+  const whatsappText = encodeURIComponent("How can i help you ?");
+  const [isBouncing, setIsBouncing] = useState(false);
+
+
+  useEffect(() => {
+    const triggerBounce = () => {
+      setIsBouncing(true);
+      const timeoutId = setTimeout(() => setIsBouncing(false), 1200);
+      return timeoutId;
+    };
+    let timeoutId = triggerBounce();
+    const intervalId = setInterval(() => {
+      timeoutId = triggerBounce();
+    }, 10000);
+  }, []);
+
+
   const items = [
     {
       icon: <Bolt />,
@@ -88,6 +108,25 @@ export default function Home() {
           <QuickAnswer />
         </div>
         <Footer />
+
+        <a
+        href={`https://wa.me/${whatsappNumber}?text=${whatsappText}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+        className={`fixed z-50 bottom-24 right-5 transition-transform hover:scale-105 active:scale-95 ${
+          isBouncing ? "animate-bounce" : ""
+        }`}
+      >
+        <Image
+        width={100}
+        height={100}
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+          alt="WhatsApp"
+          className="w-16  drop-shadow-xl"
+        />
+      </a>
+
       </div>
     </div>
   );
