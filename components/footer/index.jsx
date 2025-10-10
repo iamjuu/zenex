@@ -221,7 +221,9 @@ const Footer = () => {
             <nav className="space-y-2 text-sm">
               {/* Instagram */}
               <a
-                href="/"
+                href="https://www.instagram.com/zenexcomputerservicesllc"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center hover:text-pink-500 transition-colors duration-300 group py-1"
               >
                 <svg
@@ -251,7 +253,9 @@ const Footer = () => {
 
               {/* LinkedIn */}
               <a
-                href="/"
+                href="https://www.linkedin.com/company/zenex-computer-services-llc/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center hover:text-blue-700 transition-colors duration-300 group py-1"
               >
                 <svg
@@ -266,7 +270,7 @@ const Footer = () => {
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/7025715250"
+                href="https://wa.me/971552773923"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center hover:text-green-500 transition-colors duration-300 group py-1"
