@@ -7,17 +7,20 @@ import Button from "../button";
 import { Menu, X, Phone, Mail, Instagram, Linkedin } from "lucide-react"; // Import Lucide icons
 import { Logo } from "../../public/assets";
 import Image from "next/image";
+import { services } from "../../app/services/data";
 
 const navLinks = [
-  { href: "#hero", label: "Home" },
-  { href: "#solution", label: "Solution" },
-  { href: "#project", label: "Projects" },
-  { href: "#blog", label: "Blog" },
-  { href: "#about", label: "About" },
+  { href: "/#hero", label: "Home" },
+  { href: "/#about", label: "About" },
+  { href: "/services", label: "services" },
+  { href: "/#solution", label: "Solution" },
+  { href: "/#project", label: "Projects" },
+  { href: "/#blog", label: "Blog" },
 ];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -89,15 +92,38 @@ const Header = () => {
           {/* Desktop Navigation Menu */}
           <nav className="hidden md:flex items-center gap-[72px]">
             {navLinks.map((link, index) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="relative text-[14px] font-medium duration-700 delay-200 hover:text-[#3B82F6] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-gradient-to-r after:from-[#3B82F6] after:to-[#A855F7] after:content-[''] after:transition-transform after:duration-300 hover:after:scale-x-100"
-                data-aos="flip-down"
-                data-aos-delay={index * 400}
-              >
-                {link.label}
-              </Link>
+              link.href === "/services" ? (
+                <div key={link.label} className="relative group" data-aos="flip-down" data-aos-delay={index * 400}>
+                  <span
+                    className="cursor-default relative text-[14px] font-medium duration-700 delay-200 hover:text-[#3B82F6] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-gradient-to-r after:from-[#3B82F6] after:to-[#A855F7] after:content-[''] after:transition-transform after:duration-300"
+                  >
+                    {link.label}
+                  </span>
+                  <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute left-0 top-full mt-3 bg-white border border-gray-100 shadow-lg rounded-md min-w-56 z-[70]">
+                    <div className="py-2">
+                      {services.map((svc) => (
+                        <Link
+                          key={svc.id}
+                          href={`/services/${svc.id}`}
+                          className="block px-4 py-2 text-[13px] text-gray-700 hover:bg-gray-50 hover:text-[#3B82F6]"
+                        >
+                          {svc.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="relative text-[14px] font-medium duration-700 delay-200 hover:text-[#3B82F6] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:origin-left after:scale-x-0 after:bg-gradient-to-r after:from-[#3B82F6] after:to-[#A855F7] after:content-[''] after:transition-transform after:duration-300 hover:after:scale-x-100"
+                  data-aos="flip-down"
+                  data-aos-delay={index * 400}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </nav>
 
@@ -108,7 +134,7 @@ const Header = () => {
             data-aos-delay={1000}
           >
             <Button
-              href="#contact"
+              href="/#contact"
               className="flex items-center px-4 py-1    rounded-[8px] text-gray-700 hover:bg-gradient-to-r hover:from-[#3B82F6] hover:to-[#A855F7] hover:text-white font-medium transition-all duration-200"
             >
               Contact Us
@@ -150,19 +176,46 @@ const Header = () => {
             </div>
             <nav className="flex flex-col space-y-2 px-4 pt-2 pb-4">
               {navLinks.map((link, index) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center hover:text-[#3B82F6] space-x-3 px-3 py-2 rounded-md text-[12px] font-medium text-gray-700"
-                  data-aos="flip-down"
-                  data-aos-delay={index * 100}
-                >
-                  <span>{link.label}</span>
-                </Link>
+                link.href === "/services" ? (
+                  <div key={link.label} className="px-1" data-aos="flip-down" data-aos-delay={index * 100}>
+                    <button
+                      type="button"
+                      onClick={() => setIsServicesOpen((p) => !p)}
+                      className="w-full flex items-center justify-between px-3 py-2 rounded-md text-[12px] font-medium text-gray-700 hover:text-[#3B82F6]"
+                    >
+                      <span>{link.label}</span>
+                      <span className={`transition-transform ${isServicesOpen ? "rotate-180" : "rotate-0"}`}>▾</span>
+                    </button>
+                    {isServicesOpen && (
+                      <div className="mt-1 ml-2 border-l border-gray-100">
+                        {services.map((svc) => (
+                          <Link
+                            key={svc.id}
+                            href={`/services/${svc.id}`}
+                            onClick={() => setIsMenuOpen(false)}
+                            className="block pl-4 pr-3 py-2 text-[12px] text-gray-700 rounded-md hover:bg-gray-50 hover:text-[#3B82F6]"
+                          >
+                            {svc.title}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="flex items-center hover:text-[#3B82F6] space-x-3 px-3 py-2 rounded-md text-[12px] font-medium text-gray-700"
+                    data-aos="flip-down"
+                    data-aos-delay={index * 100}
+                  >
+                    <span>{link.label}</span>
+                  </Link>
+                )
               ))}
               <Link
-                href="#contact"
+                href="/#contact"
                 onClick={() => setIsMenuOpen(false)}
                 className="flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#3B82F6] hover:bg-gray-50 transition-all duration-500 ease-in-out delay-100 hover:scale-105 hover:shadow-sm"
                 data-aos="flip-down"
