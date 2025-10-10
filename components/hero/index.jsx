@@ -3,6 +3,7 @@ import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { Backgound, TestHero,AboutThumb1_1, AboutThumb1_2, Access1, Access2, AboutThumb5_3, BgContactBg1_1, CtaThumb, DownloadThumb1_1, HeroBg1_3 } from "../../public/assets";
 import AnimationText from "../../animation/text";
+import Threads from '../../ui/background'; 
 import Button from "../button";
   const Index = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -32,6 +33,8 @@ import Button from "../button";
   };
   return (
     <div className="flex pb-10 w-full">
+
+
       <div className="max-w-7xl flex flex-col md:flex-row mx-auto">
         {/* Left Side - Text */}
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center">
