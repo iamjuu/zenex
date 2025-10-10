@@ -15,16 +15,11 @@ const page = ({ params }) => {
   return (
     <div>
       <Navbar/>
-      <main className="max-w-5xl mx-auto px-4 py-16">
-        <h1 className="text-3xl font-semibold mb-4">{service.title}</h1>
-        <p className="text-gray-600 mb-8">{service.description}</p>
-        <section className="prose max-w-none">
-          <h2>What we offer</h2>
-          <ul>
-            <li>Consultation to understand your goals</li>
-            <li>Implementation by certified professionals</li>
-            <li>Ongoing support and maintenance</li>
-          </ul>
+      <main className="w-full">
+        {/* <h1 className="text-3xl font-semibold mb-4">{service.title}</h1>
+        <p className="text-gray-600 mb-8">{service.description}</p> */}
+        <section className="w-full">
+      {service.components}
         </section>
       </main>
       <Footer/>
