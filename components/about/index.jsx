@@ -70,7 +70,7 @@ const index = () => {
           <div className="w-full  md:w-[40%] flex justify-center md:justify-start" data-aos="zoom-in" data-aos-delay="100">
         <Image
           src={AboutThumb1_1}
-          alt="About Tabdeel"
+          alt="About zenex"
           className="w-full max-w-xs md:w-96 rounded-xl object-cover"
           priority
         />
