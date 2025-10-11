@@ -9,22 +9,22 @@ import "aos/dist/aos.css";
 const faqs = [
   {
     q: "Can you improve weak WiFi signals in multi-floor buildings?",
-    a: "Yes. We design and deploy heat‑mapped WiFi with proper access point placement, structured cabling, and signal optimization for seamless coverage across floors.",
+    a: "Yes. We design and deploy heat-mapped WiFi with proper access point placement, structured cabling, and signal optimization for seamless coverage across floors.",
   },
   {
     q: "Do you provide CCTV installation and maintenance?",
-    a: "We handle end‑to‑end CCTV solutions including site survey, installation, remote monitoring setup, and ongoing maintenance contracts.",
+    a: "We handle end-to-end CCTV solutions including site survey, installation, remote monitoring setup, and ongoing maintenance contracts.",
   },
   {
-    q: "Can Tabdeel handle both residential and commercial projects?",
-    a: "Absolutely. Our team executes residential villas, retail, hospitality, warehouses, and mixed‑use projects across the UAE.",
+    q: "Can Zenex handle both residential and commercial projects?",
+    a: "Absolutely. Our team executes residential villas, retail, hospitality, warehouses, and mixed-use projects across the UAE.",
   },
   {
     q: "How quickly can your engineers respond to service requests?",
     a: "Standard response within the same business day, with 24/7 priority support available under AMC.",
   },
   {
-    q: "Do you offer UAE‑wide coverage (Dubai, Abu Dhabi, Sharjah, etc.)?",
+    q: "Do you offer UAE-wide coverage (Dubai, Abu Dhabi, Sharjah, etc.)?",
     a: "Yes, we cover all emirates and mobilize teams based on project scope and SLAs.",
   },
   {
@@ -33,17 +33,18 @@ const faqs = [
   },
   {
     q: "Do you provide AMC (Annual Maintenance Contracts) for IT and security systems?",
-    a: "Yes. Flexible AMC packages include preventive visits, remote monitoring, and on‑call support.",
+    a: "Yes. Flexible AMC packages include preventive visits, remote monitoring, and on-call support.",
   },
   {
-    q: "How does Tabdeel help businesses reduce costs?",
-    a: "By optimizing infrastructure, preventing downtime, and right‑sizing solutions for current and future needs.",
+    q: "How does Zenex help businesses reduce costs?",
+    a: "By optimizing infrastructure, preventing downtime, and right-sizing solutions for current and future needs.",
   },
   {
     q: "Can your services scale as my business grows?",
     a: "Our designs are modular and scalable so you can expand capacity without rework.",
   },
 ];
+
 
 export default function QuickAnswer() {
   const [openIndex, setOpenIndex] = useState(null);

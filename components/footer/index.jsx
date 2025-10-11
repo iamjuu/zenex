@@ -153,7 +153,7 @@ const Footer = () => {
           {/* Company */}
           <div className="sm:col-span-1 lg:col-span-1 xl:col-span-1">
             <h2 className="bg-gradient-to-r from-[#3B82F6] to-[#A855F7] bg-clip-text text-transparent font-[500] text-[18px] sm:text-lg mb-3 sm:mb-4">
-              Tab-Deel
+              Zenex
             </h2>
             <nav className="space-y-2 text-[12px]">
               <Link
