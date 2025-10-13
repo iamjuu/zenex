@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import Link from "next/link";
 import Button from "../button";
 import { Menu, X, Phone, Mail, Instagram, Linkedin } from "lucide-react"; // Import Lucide icons
-import { Logo } from "../../public/assets";
+import { Logo,Darklogo } from "../../public/assets";
 import Image from "next/image";
 import { services } from "../../app/services/data";
 
@@ -81,7 +81,7 @@ const Header = () => {
                 <Image
                   data-aos="fade-up"
                   data-aos-delay={100}
-                  src={Logo}
+                  src={Darklogo}
                   alt="logo"
                   className="w-36 "
                 />
