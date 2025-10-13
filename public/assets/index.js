@@ -194,7 +194,11 @@ import ServiceThumb3_3 from "./service/serviceThumb3_3.png";
 import ServiceThumb3_4 from "./service/serviceThumb3_4.png";
 import ServiceThumb3_5 from "./service/serviceThumb3_5.png";
 
-export { Logo, Backgound, TestHero, AboutImage, Service1, Service2, Service3,
+
+import Darklogo from "./images/darklogo.png"
+
+export { Darklogo,
+    Logo, Backgound, TestHero, AboutImage, Service1, Service2, Service3,
     Card1,Card2,Card3,Card4,Card5,Card6,
     Access1,Access2,Access3,Access4,Access5,Access6,Access7,Access8,Access9,Access15,Access555,AccessVideo,
     About03,About2old,AboutProfile1_1,AboutThumb1_1,AboutThumb1_2,AboutThumb2_1,AboutThumb3_1,AboutThumb3_2,AboutThumb3_3,AboutThumb4_1,AboutThumb4_2,AboutThumb4_3,AboutThumb5_1,AboutThumb5_2,AboutThumb5_3,AboutOld,
