@@ -10,7 +10,7 @@ Company Information:
 - Location: Dubai, UAE
 - Experience: 10+ years in IT solutions
 - Services: Web Development, Digital Marketing, CCTV Solutions, Cyber Security
-- Contact: Phone: +971 56 440 7700, Email: info@zenex.ae, Website: www.zenex.ae
+- Contact: Phone: +971 55 277 3923, Email: info@zenex.ae, Website: www.zenex.ae
 
 Services and Pricing:
 1. Web Development: Starting from AED 2,500
@@ -74,14 +74,15 @@ export async function POST(req) {
 
     return NextResponse.json({ text, quickReplies });
   } catch (error) {
-    console.error("Gemini route error", error);
+    console.error("Gemini route error:", error);
     return NextResponse.json(
       {
+        error: "Failed to generate response",
         text:
           "I'm having trouble right now. Please try again, or contact us at +971 56 440 7700.",
         quickReplies: ["Contact us directly", "Try again", "Schedule a call"],
       },
-      { status: 200 }
+      { status: 500 }
     );
   }
 }
