@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useRef } from "react";
 import Image from "next/image";
-import { Backgound, TestHero,AboutThumb1_1, AboutThumb1_2, Access1, Access2, AboutThumb5_3, BgContactBg1_1, CtaThumb, DownloadThumb1_1, HeroBg1_3 } from "../../public/assets";
+import { Backgound, TestHero,AboutThumb1_1, AboutThumb1_2, Access1, Access2, AboutThumb5_3, BgContactBg1_1, CtaThumb, DownloadThumb1_1, HeroBg1_3 ,DarkHeroImage} from "../../public/assets";
 import AnimationText from "../../animation/text";
 import Threads from '../../ui/background'; 
 import Button from "../button";
@@ -72,10 +72,10 @@ import Button from "../button";
             <div className="absolute inset-0 m-0 rounded-lg bg-gray-200 animate-pulse" />
           )}
           <Image
-            src={HeroBg1_3}
+            src={DarkHeroImage}
             alt="Background"
             onLoad={() => setImageLoaded(true)}
-            className={`object-cover w-full h-auto max-h-[400px] md:max-h-full transition-opacity duration-300 ${
+            className={`object-cover w-[300px] md:max-h-full transition-opacity duration-300 ${
               imageLoaded ? "opacity-100" : "opacity-0"
             }`}
             style={{ transform: `translate3d(${offsetX}px, ${offsetY}px, 0)`, transition: "transform 60ms linear", willChange: "transform" }}
