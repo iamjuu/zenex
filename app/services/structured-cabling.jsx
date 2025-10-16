@@ -50,7 +50,7 @@ const StructuredCabling = () => {
       title: "Cable Management",
       description: "Professional cable management and organization solutions.",
       icon: "📋",
-      image: "/assets/images/service1.jpg",
+      image: "/assets/cctv/18.png",
       features: [
         "Rack Organization",
         "Cable Trays",
