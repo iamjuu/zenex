@@ -146,10 +146,16 @@ const DigitalMarketing = () => {
           
           <div>
 
-          <Button>
-
-              Learn more
-          </Button>
+          <a
+              href="https://wa.me/971552773923?text=Hi! I'm interested in Digital Marketing services. Can you help me?"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp about Digital Marketing services"
+            >
+              <Button>
+                Learn More
+              </Button>
+            </a>
           </div>
         
         </div>

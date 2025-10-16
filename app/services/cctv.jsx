@@ -1,6 +1,6 @@
 "use client";
-import Button from "@/components/button";
 import ServiceCards from "@/components/productcard";
+import { Button } from "@/components/ui/moving-border";
 import React from "react";
 
 const CCTV = () => {
@@ -137,9 +137,20 @@ const CCTV = () => {
           </p>
 
           <div className="mt-4 sm:mt-6">
-            <Button>
+            {/* <Button>
               Learn more
-            </Button>
+            </Button> */}
+            <a
+              href="https://wa.me/971552773923?text=Hi! I'm interested in CCTV services. Can you help me?"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp about CCTV services"
+            >
+              <Button>
+                Learn More
+              </Button>
+            </a>
+          
           </div>
         </div>
       </div>

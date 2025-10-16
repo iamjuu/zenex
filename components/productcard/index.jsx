@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { ChevronRight } from 'lucide-react'
 
 const ServiceCard = ({ service }) => {
   return (
@@ -9,7 +10,7 @@ const ServiceCard = ({ service }) => {
         className="h-48 w-full bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${service.image})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div> */}
       </div>
       
       {/* Content */}
@@ -37,12 +38,10 @@ const ServiceCard = ({ service }) => {
         {/* Action Button */}
         <Link 
           href={`/services/${service.id}`}
-          className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+          className="inline-flex items-center gap-2 rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium  transition-colors hover:bg-gradient-to-r from-[#3B82F6] to-[#A855F7] text-black hover:text-white"
         >
           Learn More
-          <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
+          <ChevronRight size={18} />
         </Link>
       </div>
     </div>
