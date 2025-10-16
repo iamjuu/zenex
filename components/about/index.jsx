@@ -1,63 +1,34 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { About2old, AboutImage, AboutThumb1_1, TestHero } from '../../public/assets'
-import { Zap, ShieldCheck, Clock3, MapPin, Server, Cable, PhoneCall, BadgeCheck, LayoutDashboard, Monitor, Camera } from 'lucide-react'
+import { Code, Megaphone, Camera, Shield } from 'lucide-react'
 
 const features = [
   {
-    icon: Zap,
-    title: 'Software Services',
-    description: 'Setup, optimization & proactive monitoring for peak performance'
+    icon: Code,
+    title: 'Web Development',
+    description: 'Custom websites and web applications built with modern technologies',
+    href: '/services/webdevelopment'
   },
   {
-    icon: ShieldCheck,
-    title: 'Server Solutions',
-    description: 'We provide new and emerging technologies'
+    icon: Megaphone,
+    title: 'Digital Marketing',
+    description: 'Strategic online marketing solutions to grow your business',
+    href: '/services/digital-marketing'
   },
   {
-    icon: Clock3,
-    title: 'Cloud & Backup Solutions',
-    description: 'Secure, scalable storage with guaranteed data safety'
+    icon: Camera,
+    title: 'CCTV',
+    description: 'Professional surveillance systems for enhanced security',
+    href: '/services/cctv'
   },
   {
-    icon: MapPin,
-    title: 'Data Recovery',
-    description: 'Fast, reliable restoration when it matters most'
-  },
-
-  {
-    icon:Cable,
-    title:'Structured Cabling',
-    description:'Organized, future-ready networks for smooth connectivity',
-  },
-  {
-    icon:PhoneCall,
-    title:'PABX Solutions',
-    description:'Advanced communication systems for seamless collaboration',
-  },
-  {
-    icon:BadgeCheck,
-    title:'Access Control & Time Attendance',
-    description:'Smart security for smarter workplaces',
-  },
-  {
-    icon:LayoutDashboard,
-    title:'ERP Solutions',
-    description:'Streamlined business management from one dashboard',
-  },
-  {
-    icon:Monitor,
-    title:'PC & Workstation Support',
-    description:' End-user support that keeps productivity high',
-  },
-  {
-    icon:Camera,
-    title:'CCTV Solutions',
-    description:'Surveillance you can depend on',
-  },
-
-
-
+    icon: Shield,
+    title: 'Cyber Security',
+    description: 'Comprehensive protection against digital threats and vulnerabilities',
+    href: '/services/cyber-security'
+  }
 ]
 
 const index = () => {
@@ -79,14 +50,15 @@ const index = () => {
       {/* Feature list */}
           <div className="w-full md:w-[60%]" data-aos="fade-down" data-aos-delay="150">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {features.map(({ icon: Icon, title, description }, idx) => (
-          <div
+              {features.map(({ icon: Icon, title, description, href }, idx) => (
+          <Link
           key={idx}
-          className="relative flex items-start gap-5 rounded-xl p-[1px]  transition-shadow hover:shadow-md"
+          href={href}
+          className="relative flex items-start gap-5 rounded-xl p-[1px] transition-shadow hover:shadow-md cursor-pointer"
           data-aos="fade-up"
           data-aos-delay={(idx % 2 === 0 ? 0 : 100) + Math.floor(idx / 2) * 100}
         >
-          <div className="flex items-start gap-5 w-full h-full rounded-xl backdrop-blur-md p-5 shadow-sm">
+          <div className="flex items-start gap-5 w-full h-full rounded-xl backdrop-blur-md p-5 shadow-sm hover:shadow-lg transition-shadow">
             <div className="shrink-0 rounded-full bg-green-100 text-green-700 p-3">
               <Icon className="w-5 h-5" />
             </div>
@@ -95,7 +67,7 @@ const index = () => {
               <p className="text-[12px] text-gray-600">{description}</p>
             </div>
           </div>
-        </div>
+        </Link>
         
           ))}
         </div>
