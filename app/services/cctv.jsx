@@ -97,7 +97,7 @@ const CCTV = () => {
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
-          backgroundImage: `url("/assets/images/service1.jpg")`,
+          backgroundImage: `url("/assets/images/cctv.jpg")`,
           backgroundSize: "cover",        // Make the image cover the div
           backgroundPosition: "center",   // Center the image
           backgroundRepeat: "no-repeat",  // Prevent tiling

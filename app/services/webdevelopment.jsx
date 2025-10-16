@@ -72,7 +72,7 @@ const WebDevelopment = () => {
         alignItems: "center",
         justifyContent: "center",
         flexDirection: "column",
-        backgroundImage: `url("/assets/images/service3.jpg")`,
+        backgroundImage: `url("/assets/images/pexels-julio-lopez-75309646-34258667.jpg")`,
         backgroundSize: "cover", // Make the image cover the div
         backgroundPosition: "center", // Center the image
         backgroundRepeat: "no-repeat", // Prevent tiling

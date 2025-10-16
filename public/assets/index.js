@@ -198,8 +198,14 @@ import ServiceThumb3_5 from "./service/serviceThumb3_5.png";
 import Darklogo from "./images/darklogo.png"
 import DarkHeroImage from "./images/zenex logo .png"
 import DigitalMarketingImage from "./images/happy-sales-representative-making-big-sale-work-excited-young-woman-with-headset-laughing-while-speaking-customer-call-center.jpg"
-
-export { DarkHeroImage,Darklogo,
+import CCtv from "./images/cctv.jpg"
+import ServerSolutionsImage from "./images/server.jpg"
+import CableImage from "./images/cable.jpg"
+import PcWorkstationImage from "./images/pcworkstation.jpg"
+import Coding from "./images/pexels-julio-lopez-75309646-34258667.jpg"
+export {
+    
+    CCtv,ServerSolutionsImage,CableImage,PcWorkstationImage,Coding,DigitalMarketingImage ,DarkHeroImage,Darklogo,
     Logo, Backgound, TestHero, AboutImage, Service1, Service2, Service3,
     Card1,Card2,Card3,Card4,Card5,Card6,
     Access1,Access2,Access3,Access4,Access5,Access6,Access7,Access8,Access9,Access15,Access555,AccessVideo,

@@ -97,7 +97,7 @@ const CyberSecurity = () => {
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
-          backgroundImage: `url("/assets/images/service2.jpg")`,
+          backgroundImage: `url("/assets/images/cybersecurity.jpg")`,
           backgroundSize: "cover",        // Make the image cover the div
           backgroundPosition: "center",   // Center the image
           backgroundRepeat: "no-repeat",  // Prevent tiling
