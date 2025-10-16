@@ -11,6 +11,7 @@ import Service from "@/components/service";
 import Footer from "@/components/footer";
 import QuickAnswer from "@/components/quickanswer";
 import Contact from "@/components/contect";
+import ChatBot from "@/components/chatbot";
 import { Bolt, Users, LineChart, Clock, Ticket, Database } from "lucide-react";
 export default function Home() {
   const whatsappNumber =  "971564407700"; // E.164 format, e.g., 15551234567
@@ -110,6 +111,7 @@ export default function Home() {
         </div>
         <Footer />
 
+        {/* WhatsApp Button */}
         <a
         href={`https://wa.me/${whatsappNumber}?text=${whatsappText}`}
         target="_blank"
@@ -128,6 +130,8 @@ export default function Home() {
         />
       </a>
 
+      {/* AI Chatbot */}
+      <ChatBot />
 
       </div>
     </div>

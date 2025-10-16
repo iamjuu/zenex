@@ -73,7 +73,13 @@ export default function QuickAnswer() {
 
             <div className="mt-10">
               <p className="text-red-600 text-[12px] mb-3">Didn’t find your question?</p>
-              <Button as="a" href="#contact" className="   text-black ">
+              <Button
+                as="a"
+                href="https://wa.me/971552773923?text=Hi! I have a question about your services."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black"
+              >
                 Contact Us Now
               </Button>
             </div>
