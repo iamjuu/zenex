@@ -33,7 +33,7 @@ const Header = () => {
       <div className="fixed top-0 left-0 w-full bg-white text-[#135fa5] text-[12px] z-[60]">
         <div className="max-w-7xl mx-auto flex items-center justify-between h-10 px-4">
           <div className="flex items-center gap-6">
-            <span className="hidden sm:inline">Dubai -</span>
+            <span className="hidden sm:inline">Dubai - Ajwan</span>
             <a
               href="tel:+971552773923"
               className="flex items-center gap-2 hover:opacity-90"
@@ -136,7 +136,11 @@ const Header = () => {
               data-aos-delay={1000}
             >
               <Button
-                href="/#contact"
+                as="a"
+                href="https://wa.me/971552773923?text=How%20can%20I%20help%20you%3F"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat on WhatsApp"
                 className="flex items-center px-4 py-1    rounded-[8px] text-gray-700 hover:bg-gradient-to-r hover:from-[#3B82F6] hover:to-[#A855F7] hover:text-white font-medium transition-all duration-200"
               >
                 Contact Us
@@ -227,15 +231,18 @@ const Header = () => {
                     </Link>
                   )
                 )}
-                <Link
-                  href="/#contact"
+                <a
+                  href="https://wa.me/971552773923?text=How%20can%20I%20help%20you%3F"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setIsMenuOpen(false)}
+                  aria-label="Chat on WhatsApp"
                   className="flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-[#3B82F6] hover:bg-gray-50 transition-all duration-500 ease-in-out delay-100 hover:scale-105 hover:shadow-sm"
                   data-aos="flip-down"
                 >
                   <Phone color="black" className="w-5 h-5" />
                   <span>Contact Us</span>
-                </Link>
+                </a>
               </nav>
             </div>
           </>
