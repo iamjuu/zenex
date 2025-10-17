@@ -36,8 +36,15 @@ const ServiceCard = ({ service }) => {
         </ul>
         
         {/* Action Button */}
-        <Link 
+        {/* <Link 
           href={`/services/${service.id}`}
+          className="inline-flex items-center gap-2 rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium  transition-colors hover:bg-gradient-to-r from-[#3B82F6] to-[#A855F7] text-black hover:text-white"
+        >
+          Learn More
+          <ChevronRight size={18} />
+        </Link> */}
+     <Link 
+          href={`/`}
           className="inline-flex items-center gap-2 rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium  transition-colors hover:bg-gradient-to-r from-[#3B82F6] to-[#A855F7] text-black hover:text-white"
         >
           Learn More
