@@ -2,32 +2,80 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { About2old, AboutImage, AboutThumb1_1, TestHero } from '../../public/assets'
-import { Code, Megaphone, Camera, Shield } from 'lucide-react'
+import { Code, Megaphone, Camera, Shield, Server, Cloud, HardDrive, Settings, Users, Phone, Monitor, Wifi } from 'lucide-react'
 
 const features = [
   {
+    icon: Server,
+    title: 'Server Solutions',
+    description: 'Design, deploy, and maintain secure, high‑availability server environments',
+    href: '/services/server-solutions'
+  },
+  {
+    icon: Cloud,
+    title: 'Cloud & Backup Solutions',
+    description: 'Cloud migrations, backups, and DR to safeguard business continuity',
+    href: '/services/cloud-backup-solutions'
+  },
+  {
+    icon: HardDrive,
+    title: 'Data Recovery',
+    description: 'Professional recovery for HDD/SSD, RAID/NAS, and servers',
+    href: '/services/data-recovery'
+  },
+  {
+    icon: Settings,
+    title: 'ERP Solutions',
+    description: 'Implementation and customization across finance, inventory, HR, and CRM',
+    href: '/services/erp-solutions'
+  },
+  {
+    icon: Users,
+    title: 'Access Control & Time Attendance',
+    description: 'RFID/biometric access with centralized logs and payroll sync',
+    href: '/services/access-control-time-attendance'
+  },
+  {
+    icon: Phone,
+    title: 'PABX Solutions',
+    description: 'IP‑PBX, SIP trunking, IVR, and CRM telephony integrations',
+    href: '/services/pabx-solutions'
+  },
+  {
+    icon: Monitor,
+    title: 'PC & Workstation Support',
+    description: 'Proactive maintenance, rollouts, and rapid break‑fix support',
+    href: '/services/pc-workstation-support'
+  },
+  {
+    icon: Camera,
+    title: 'CCTV',
+    description: 'End‑to‑end surveillance solutions with installation and monitoring',
+    href: '/services/cctv'
+  },
+  {
     icon: Code,
     title: 'Web Development',
-    description: 'Custom websites and web applications built with modern technologies',
+    description: 'Modern, performant websites and web apps tailored to your business',
     href: '/services/webdevelopment'
   },
   {
     icon: Megaphone,
     title: 'Digital Marketing',
-    description: 'Strategic online marketing solutions to grow your business',
+    description: 'SEO, social media, and campaigns that drive measurable growth',
     href: '/services/digital-marketing'
-  },
-  {
-    icon: Camera,
-    title: 'CCTV',
-    description: 'Professional surveillance systems for enhanced security',
-    href: '/services/cctv'
   },
   {
     icon: Shield,
     title: 'Cyber Security',
-    description: 'Comprehensive protection against digital threats and vulnerabilities',
+    description: 'Protect your systems with audits, hardening, and continuous monitoring',
     href: '/services/cyber-security'
+  },
+  {
+    icon: Wifi,
+    title: 'Structured Cabling',
+    description: 'Certified copper and fiber installations with documentation',
+    href: '/services/structured-cabling'
   }
 ]
 
@@ -49,7 +97,7 @@ const index = () => {
 
       {/* Feature list */}
           <div className="w-full md:w-[60%]" data-aos="fade-down" data-aos-delay="150">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-h-96 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 pr-2">
               {features.map(({ icon: Icon, title, description, href }, idx) => (
           <Link
           key={idx}
