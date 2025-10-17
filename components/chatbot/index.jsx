@@ -2,16 +2,17 @@
 import { useState, useRef, useEffect } from "react";
 import { MessageCircle, X, Send, Bot, User, BotMessageSquare } from "lucide-react";
 import Image from "next/image";
-import { generateResponse } from "../../lib/geminiService";
+import { generateResponse } from "../../lib/openaiService";
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
     {
       id: 1,
-      text: "Hello! I'm Zenex AI Assistant. How can I help you with our services today?",
+      text: "Hello! I'm Zenex AI Assistant. I'm here to help you with information about our IT services. What would you like to know about our offerings?",
       sender: "bot",
       timestamp: new Date(),
+      quickReplies: ["Tell me about your services", "What are your prices?", "How can I contact you?"]
     },
   ]);
   const [inputValue, setInputValue] = useState("");
@@ -46,8 +47,51 @@ const ChatBot = () => {
       // Get conversation history for context
       const conversationHistory = messages.slice(-10); // Last 10 messages for context
       
-      // Call Gemini API
+      // Call generateResponse (this will check for static responses first)
       const response = await generateResponse(currentInput, conversationHistory);
+      console.log(response,'data gotted');
+      const botMessage = {
+        id: Date.now() + 1,
+        text: response.text,
+        sender: "bot",
+        timestamp: new Date(),
+        quickReplies: response.quickReplies
+      };
+      
+      setMessages(prev => [...prev, botMessage]);
+    } catch (error) {
+      console.error('Error generating response:', error);
+      
+      // Fallback response
+      const botMessage = {
+        id: Date.now() + 1,
+        text: "I apologize, but I'm having trouble processing your request right now. Please try again or contact us directly at +971 55 277 3923.",
+        sender: "bot",
+        timestamp: new Date(),
+        quickReplies: ["Contact us directly", "Try again", "Schedule a call"]
+      };
+      
+      setMessages(prev => [...prev, botMessage]);
+    } finally {
+      setIsTyping(false);
+    }
+  };
+
+  const handleQuickReply = async (reply) => {
+    // Add user message immediately
+    const userMessage = {
+      id: Date.now(),
+      text: reply,
+      sender: "user",
+      timestamp: new Date(),
+    };
+
+    setMessages(prev => [...prev, userMessage]);
+    setIsTyping(true);
+
+    try {
+      // Check if this is a static response first
+      const response = await generateResponse(reply, messages.slice(-10));
       
       const botMessage = {
         id: Date.now() + 1,
@@ -64,7 +108,7 @@ const ChatBot = () => {
       // Fallback response
       const botMessage = {
         id: Date.now() + 1,
-        text: "I apologize, but I'm having trouble processing your request right now. Please try again or contact us directly at +971 56 440 7700.",
+        text: "I apologize, but I'm having trouble processing your request right now. Please try again or contact us directly at +971 55 277 3923.",
         sender: "bot",
         timestamp: new Date(),
         quickReplies: ["Contact us directly", "Try again", "Schedule a call"]
@@ -74,14 +118,6 @@ const ChatBot = () => {
     } finally {
       setIsTyping(false);
     }
-  };
-
-  const handleQuickReply = async (reply) => {
-    setInputValue(reply);
-    // Wait a moment for the input to be set, then send
-    setTimeout(async () => {
-      await handleSendMessage();
-    }, 100);
   };
 
   const handleKeyPress = async (e) => {
