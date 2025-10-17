@@ -1,9 +1,8 @@
 "use client"
 import React, { useState, useRef } from "react";
 import Image from "next/image";
-import { Backgound, TestHero,AboutThumb1_1, AboutThumb1_2, Access1, Access2, AboutThumb5_3, BgContactBg1_1, CtaThumb, DownloadThumb1_1, HeroBg1_3 ,DarkHeroImage} from "../../public/assets";
-import AnimationText from "../../animation/text";
-import Threads from '../../ui/background'; 
+import { DarkHeroImage} from "../../public/assets";
+import AnimationText from "../../animation/text"; 
 import Button from "../button";
   const Index = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -57,7 +56,7 @@ import Button from "../button";
 
           <div className="w-full gap-5 flex">
             <Button className=" text-white">Get Quote</Button>
-            <Button className=" ">Contect us</Button>
+            <Button className=" ">Contact us</Button>
           </div>
         </div>
 
