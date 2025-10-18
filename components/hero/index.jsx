@@ -34,7 +34,7 @@ import Button from "../button";
     <div className="flex pb-10 w-full">
 
 
-      <div className="max-w-7xl flex flex-col md:flex-row mx-auto">
+      <div className="max-w-7xl pt-[120px] flex flex-col md:flex-row mx-auto">
         {/* Left Side - Text */}
         <div className="w-full md:w-1/2 flex flex-col items-center justify-center">
           <div className="text-left p-6 md:p-8">
