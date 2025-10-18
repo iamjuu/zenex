@@ -12,6 +12,7 @@ import Footer from "@/components/footer";
 import QuickAnswer from "@/components/quickanswer";
 import Contact from "@/components/contect";
 import ChatBot from "@/components/chatbot";
+import Testimonials from "@/components/testimonals";
 import { Bolt, Users, LineChart, Clock, Ticket, Database } from "lucide-react";
 export default function Home() {
   const whatsappNumber =  "971564407700"; // E.164 format, e.g., 15551234567
@@ -105,6 +106,9 @@ export default function Home() {
         </div>
         <div id="about">
           <Service />
+        </div>
+        <div id="testimonials">
+          <Testimonials />
         </div>
         <div>
           <QuickAnswer />
