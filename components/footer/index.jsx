@@ -1,12 +1,25 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
+import { useRouter } from "next/navigation";
 import { Logo } from "@/public/assets";
 import Image from "next/image";
+import { services } from "@/app/services/data";
 
 const Footer = () => {
   const [showToast, setShowToast] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isNavigating, setIsNavigating] = useState(false);
+  const router = useRouter();
+
+  const handleServiceClick = (serviceId) => {
+    setIsNavigating(true);
+    router.push(`/services/${serviceId}`);
+    // The loader will hide when the page loads
+    setTimeout(() => {
+      setIsNavigating(false);
+    }, 2000);
+  };
 
   const handleNewsletterSubmit = async (e) => {
     e.preventDefault();
@@ -81,72 +94,19 @@ const Footer = () => {
           {/* Service */}
           <div className="sm:col-span-1 lg:col-span-1 xl:col-span-1">
             <h2 className="bg-gradient-to-r from-[#3B82F6] to-[#A855F7] bg-clip-text text-transparent font-[500] text-[18px] sm:text-lg mb-3 sm:mb-4">
-              Service
+              Services
             </h2>
             <nav className="space-y-2 text-[12px]">
-              <Link
-                to="services"
-                spy={true}
-                smooth={true}
-                duration={500}
-                className="block hover:text-secondary transition-colors py-1"
-              >
-                Web Development
-              </Link>
-              <Link
-                to="services"
-                spy={true}
-                smooth={true}
-                duration={500}
-                className="block hover:text-secondary transition-colors py-1"
-              >
-                Staff Accommodation Wi-Fi
-              </Link>
-              <Link
-                to="services"
-                spy={true}
-                smooth={true}
-                duration={500}
-                className="block hover:text-secondary transition-colors py-1"
-              >
-                Electrical Works
-              </Link>
-              <Link
-                to="services"
-                spy={true}
-                smooth={true}
-                duration={500}
-                className="block hover:text-secondary transition-colors py-1"
-              >
-                Time Attendance
-              </Link>
-              <Link
-                to="services"
-                spy={true}
-                smooth={true}
-                duration={500}
-                className="block hover:text-secondary transition-colors py-1"
-              >
-                Networking & Telephone
-              </Link>
-              <Link
-                to="services"
-                spy={true}
-                smooth={true}
-                duration={500}
-                className="block hover:text-secondary transition-colors py-1"
-              >
-                CCTV & Security
-              </Link>
-              <Link
-                to="services"
-                spy={true}
-                smooth={true}
-                duration={500}
-                className="block hover:text-secondary transition-colors py-1"
-              >
-                Residential Design
-              </Link>
+              {services.map((service) => (
+                <button
+                  key={service.id}
+                  onClick={() => handleServiceClick(service.id)}
+                  className="block hover:text-secondary transition-colors py-1 cursor-pointer text-left w-full"
+                  disabled={isNavigating}
+                >
+                  {service.title}
+                </button>
+              ))}
             </nav>
           </div>
 
@@ -367,6 +327,7 @@ const Footer = () => {
           <span className="text-[12px]">Subscribed successfully!</span>
         </div>
       )}
+
     </>
   );
 };

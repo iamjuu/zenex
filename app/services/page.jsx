@@ -1,9 +1,20 @@
-import React from 'react'
+"use client";
+import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import Navbar from "../../components/navbar"
 import Footer from "../../components/footer"
-import Link from 'next/link'
 
 const ServicesPage = () => {
+  const [isNavigating, setIsNavigating] = useState(false);
+  const router = useRouter();
+
+  const handleServiceClick = (serviceId) => {
+    setIsNavigating(true);
+    router.push(`/services/${serviceId}`);
+    setTimeout(() => {
+      setIsNavigating(false);
+    }, 2000);
+  };
   const services = [
     {
       id: "webdevelopment",
@@ -119,12 +130,13 @@ const ServicesPage = () => {
                   <p className="text-gray-600 text-[12px] mb-4 leading-relaxed">
                     {service.description}
                   </p>
-                  <Link 
-                    href={`/services/${service.id}`}
+                  <button 
+                    onClick={() => handleServiceClick(service.id)}
                     className="inline-flex items-center text-gray-700 hover:text-purple-600 transition-colors duration-200 font-medium"
+                    disabled={isNavigating}
                   >
                     Read More →
-                  </Link>
+                  </button>
                 </div>
 
                 {/* Background Icon */}
@@ -140,6 +152,7 @@ const ServicesPage = () => {
       </div>
 
       <Footer />
+      
     </div>
   )
 }

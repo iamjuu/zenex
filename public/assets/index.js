@@ -204,7 +204,6 @@ import CableImage from "./images/cable.jpg"
 import PcWorkstationImage from "./images/pcworkstation.jpg"
 import Coding from "./images/pexels-julio-lopez-75309646-34258667.jpg"
 export {
-    
     CCtv,ServerSolutionsImage,CableImage,PcWorkstationImage,Coding,DigitalMarketingImage ,DarkHeroImage,Darklogo,
     Logo, Backgound, TestHero, AboutImage, Service1, Service2, Service3,
     Card1,Card2,Card3,Card4,Card5,Card6,

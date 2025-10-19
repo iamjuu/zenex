@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Button from "../button";
 import { Menu, X, Phone, Mail, Instagram, Linkedin } from "lucide-react"; // Import Lucide icons
 import { Logo,Darklogo } from "../../public/assets";
@@ -12,7 +13,7 @@ import { services } from "../../app/services/data";
 const navLinks = [
   { href: "/#hero", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/services", label: "services" },
+  { href: "/services", label: "Services" },
   { href: "/#solution", label: "Solution" },
   // { href: "/#project", label: "Projects" },
 ];
@@ -20,6 +21,17 @@ const navLinks = [
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isNavigating, setIsNavigating] = useState(false);
+  const router = useRouter();
+
+  const handleServiceClick = (serviceId) => {
+    setIsNavigating(true);
+    setIsMenuOpen(false); // Close mobile menu if open
+    router.push(`/services/${serviceId}`);
+    setTimeout(() => {
+      setIsNavigating(false);
+    }, 2000);
+  };
 
   useEffect(() => {
     AOS.init({
@@ -33,7 +45,7 @@ const Header = () => {
       <div className="fixed top-0 left-0 w-full bg-white text-[#135fa5] text-[12px] z-[60]">
         <div className="max-w-7xl mx-auto flex items-center justify-between h-10 px-4">
           <div className="flex items-center gap-6">
-            <span className="hidden sm:inline">Dubai - Ajwan</span>
+            <span className="hidden sm:inline">Dubai - Ajman</span>
             <a
               href="tel:+971552773923"
               className="flex items-center gap-2 hover:opacity-90"
@@ -104,13 +116,14 @@ const Header = () => {
                     <div className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute left-0 top-full mt-3 bg-white border border-gray-100 shadow-lg rounded-md min-w-56 z-[9999]">
                       <div className="py-2">
                         {services.map((svc) => (
-                          <Link
+                          <button
                             key={svc.id}
-                            href={`/services/${svc.id}`}
-                            className="block px-4 py-2 text-[13px] text-gray-700 hover:bg-gray-50 hover:text-[#3B82F6]"
+                            onClick={() => handleServiceClick(svc.id)}
+                            className="block w-full text-left px-4 py-2 text-[13px] text-gray-700 hover:bg-gray-50 hover:text-[#3B82F6]"
+                            disabled={isNavigating}
                           >
                             {svc.title}
-                          </Link>
+                          </button>
                         ))}
                       </div>
                     </div>
@@ -206,14 +219,14 @@ const Header = () => {
                       {isServicesOpen && (
                         <div className="mt-1 ml-2 border-l border-gray-100">
                           {services.map((svc) => (
-                            <Link
+                            <button
                               key={svc.id}
-                              href={`/services/${svc.id}`}
-                              onClick={() => setIsMenuOpen(false)}
-                              className="block pl-4 pr-3 py-2 text-[12px] text-gray-700 rounded-md hover:bg-gray-50 hover:text-[#3B82F6]"
+                              onClick={() => handleServiceClick(svc.id)}
+                              className="block w-full text-left pl-4 pr-3 py-2 text-[12px] text-gray-700 rounded-md hover:bg-gray-50 hover:text-[#3B82F6]"
+                              disabled={isNavigating}
                             >
                               {svc.title}
-                            </Link>
+                            </button>
                           ))}
                         </div>
                       )}
@@ -248,6 +261,7 @@ const Header = () => {
           </>
         )}
       </header>
+      
     </div>
   );
 };
