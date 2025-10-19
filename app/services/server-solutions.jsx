@@ -1,5 +1,5 @@
 "use client";
-import Button from "@/components/button";
+import { Button } from "@/components/ui/moving-border";
 import ServiceCards from "@/components/productcard";
 import React from "react";
 import { ServerSolutionsImage } from "@/public/assets";

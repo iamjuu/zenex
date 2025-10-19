@@ -137,9 +137,7 @@ const CCTV = () => {
           </p>
 
           <div className="mt-4 sm:mt-6">
-            {/* <Button>
-              Learn more
-            </Button> */}
+         
             <a
               href="https://wa.me/971552773923?text=Hi! I'm interested in CCTV services. Can you help me?"
               target="_blank"

@@ -83,7 +83,7 @@ import Button from "../button";
             src={DarkHeroImage}
             alt="Background"
             onLoad={() => setImageLoaded(true)}
-            className={`object-cover w-[300px] md:max-h-full transition-opacity duration-300 ${
+            className={` md:block hidden object-cover w-[300px] md:max-h-full transition-opacity duration-300 ${
               imageLoaded ? "opacity-100" : "opacity-0"
             }`}
             style={{ transform: `translate3d(${offsetX}px, ${offsetY}px, 0)`, transition: "transform 60ms linear", willChange: "transform" }}
