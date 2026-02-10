@@ -8,8 +8,9 @@ export async function generateStaticParams() {
   return getAllServiceIds().map((id) => ({ id }));
 }
 
-const page = ({ params }) => {
-  const service = getServiceById(params?.id);
+const page = async ({ params }) => {
+  const { id } = await params;
+  const service = getServiceById(id);
   if (!service) return notFound();
 
   return (
