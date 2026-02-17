@@ -16,7 +16,7 @@ import Testimonials from "@/components/testimonals";
 import { Bolt, Users, LineChart, Clock, Ticket, Database } from "lucide-react";
 export default function Home() {
   const whatsappNumber =  "971564407700"; // E.164 format, e.g., 15551234567
-  const whatsappText = encodeURIComponent("How can i help you ?");
+  const whatsappText = encodeURIComponent("Hi");
   const [isBouncing, setIsBouncing] = useState(false);
 
 
