@@ -103,6 +103,22 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17983601802"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag() {
+                window.dataLayer.push(arguments);
+              }
+              gtag('js', new Date());
+              gtag('config', 'AW-17983601802');
+            `,
+          }}
+        />
+      </head>
       <body className={`${montserrat.variable} ${geistMono.variable} antialiased`}>
         <AOSProvider>{children}</AOSProvider>
       </body>
