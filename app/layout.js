@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 import AOSProvider from "@/components/AOSProvider";
 
@@ -37,7 +38,7 @@ export const metadata = {
     template: "%s | zenextechnologies",
   },
   description:
-    "SWYM Digital provides reliable IT, infrastructure, and digital solutions across Dubai and the UAE.",
+    "Zenex Digital provides reliable IT, infrastructure, and digital solutions across Dubai and the UAE.",
   keywords: [
     "zenextechnologies",
     "IT services",
@@ -54,9 +55,9 @@ export const metadata = {
   openGraph: {
     title: "zenex technologies",
     description:
-      "Reliable IT and infrastructure solutions that scale with your business.",
+      "Zenex Digital provides reliable IT and infrastructure solutions that scale with your business.",
     url: "/",
-    siteName: "SWYM Digital Marketing",
+    siteName: "Zenex Digital",
     images: [
       {
         url: "/assets/images/TESTHERO.png",
@@ -72,9 +73,9 @@ export const metadata = {
     card: "summary_large_image",
     title: "zenex technologies",
     description:
-      "Reliable IT and infrastructure solutions that scale with your business.",
+      "Zenex Digital provides reliable IT and infrastructure solutions that scale with your business.",
     images: ["/assets/images/TESTHERO.png"],
-    creator: "@swymdigital",
+    creator: "@zenextechnologies",
   },
   robots: {
     index: true,
@@ -104,22 +105,25 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17983601802"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag() {
-                window.dataLayer.push(arguments);
-              }
-              gtag('js', new Date());
-              gtag('config', 'AW-17983601802');
-            `,
-          }}
+        {/* Google Ads Global Site Tag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17983601802"
+          strategy="afterInteractive"
         />
+
+        <Script id="google-ads-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17983601802');
+          `}
+        </Script>
       </head>
-      <body className={`${montserrat.variable} ${geistMono.variable} antialiased`}>
+
+      <body
+        className={`${montserrat.variable} ${geistMono.variable} antialiased`}
+      >
         <AOSProvider>{children}</AOSProvider>
       </body>
     </html>
