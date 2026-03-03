@@ -14,7 +14,15 @@ const Contact = ({ closeForm }) => {
     
     setIsSubmitting(false);
     setShowToast(true);
-    
+
+    // Google Ads conversion tracking
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      window.gtag("event", "conversion", {
+        send_to: "AW-17983601802/xe_MCPCI7oAcEIr5n_9C",
+        transaction_id: "consult_" + Date.now(),
+      });
+    }
+
     // Hide toast after 3 seconds
     setTimeout(() => {
       setShowToast(false);

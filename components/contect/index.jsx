@@ -25,6 +25,13 @@ const Index = () => {
           },
         })
       );
+      // Google Ads conversion tracking
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "conversion", {
+          send_to: "AW-17983601802/xe_MCPCI7oAcEIr5n_9C",
+          transaction_id: "lead_" + Date.now(),
+        });
+      }
     }
     // Optionally reset form
     e.currentTarget.reset();
