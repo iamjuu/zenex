@@ -48,17 +48,22 @@ const Header = () => {
             <span className="hidden sm:inline">Dubai - Ajman</span>
             <a
               href="tel:+971552773923"
-              className="flex items-center gap-2 hover:opacity-90"
+              className="flex   items-center gap-2 hover:opacity-90"
             >
               <Phone className="w-4 h-4" />
-              <span>+971 55 277 3923</span>
+              
+              <span>+971 56 440 7700
+             </span>
+             <span>
+             +971 6 704 7523
+             </span>
             </a>
             <a
-              href="mailto:zenex.techllc@gmail.com"
+              href="mailto:Info@zenextechnologies.com"
               className="hidden sm:flex items-center gap-2 hover:opacity-90"
             >
               <Mail className="w-4 h-4" />
-              <span>zenex.techllc@gmail.com</span>
+              <span>Info@zenextechnologies.com</span>
             </a>
           </div>
           <div className="flex items-center gap-4">
