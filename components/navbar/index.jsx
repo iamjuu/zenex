@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Button from "../button";
-import { Menu, X, Phone, Mail, Instagram, Linkedin } from "lucide-react"; // Import Lucide icons
+import { Menu, X, Phone, Mail, Instagram, Linkedin, MapPin } from "lucide-react"; // Import Lucide icons
 import { Logo,Darklogo } from "../../public/assets";
 import Image from "next/image";
 import { services } from "../../app/services/data";
@@ -45,10 +45,13 @@ const Header = () => {
       <div className="fixed top-0 left-0 w-full bg-white text-[#135fa5] text-[12px] z-[60]">
         <div className="max-w-7xl mx-auto flex items-center justify-between h-10 px-4">
           <div className="flex items-center gap-6">
-            <span className="hidden sm:inline">Dubai - Ajman</span>
+            <span className="hidden sm:flex items-center gap-2">
+              <MapPin className="w-4 h-4" />
+              Dubai - Ajman
+            </span>
             <a
               href="tel:+971552773923"
-              className="flex   items-center gap-2 hover:opacity-90"
+              className="flex items-center gap-2 hover:opacity-90"
             >
               <Phone className="w-4 h-4" />
               
