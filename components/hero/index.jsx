@@ -58,7 +58,7 @@ import Button from "../button";
             {/* <Button className=" text-white">Get Quote</Button> */}
             <Button
               as="a"
-              href="https://wa.me/971552773923?text=How%20can%20I%20help%20you%3F"
+              href="https://wa.me/971552773923?text=Hi"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat on WhatsApp"
